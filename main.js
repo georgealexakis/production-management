@@ -290,16 +290,19 @@ var map = {
 	"./layouts/admin-layout/admin-layout.module": [
 		"./src/app/layouts/admin-layout/admin-layout.module.ts",
 		"default~layouts-admin-layout-admin-layout-module~layouts-consultant-layout-consultant-layout-module~~2c32b847",
+		"common",
 		"layouts-admin-layout-admin-layout-module"
 	],
 	"./layouts/consultant-layout/consultant-layout.module": [
 		"./src/app/layouts/consultant-layout/consultant-layout.module.ts",
 		"default~layouts-admin-layout-admin-layout-module~layouts-consultant-layout-consultant-layout-module~~2c32b847",
+		"common",
 		"layouts-consultant-layout-consultant-layout-module"
 	],
 	"./layouts/farmer-layout/farmer-layout.module": [
 		"./src/app/layouts/farmer-layout/farmer-layout.module.ts",
 		"default~layouts-admin-layout-admin-layout-module~layouts-consultant-layout-consultant-layout-module~~2c32b847",
+		"common",
 		"layouts-farmer-layout-farmer-layout-module"
 	]
 };
@@ -343,7 +346,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"router.url !== '/login' && router.url !== '/register' else elseBlock\">\n    <router-outlet></router-outlet>\n</div>\n<ng-template #elseBlock>\n    <div class=\"wrapper\" style=\"background-color: #e7e7e7\">\n        <router-outlet></router-outlet>\n    </div>\n</ng-template>"
+module.exports = "<div *ngIf=\"router.url !== '/login' && router.url !== '/register' && router.url !== '/terms-of-use'; else elseBlock\">\n    <router-outlet></router-outlet>\n</div>\n<ng-template #elseBlock>\n    <div class=\"wrapper\">\n        <router-outlet></router-outlet>\n    </div>\n</ng-template>"
 
 /***/ }),
 
@@ -383,7 +386,8 @@ var AppComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
         }),
-        __metadata("design:paramtypes", [_angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
+        __metadata("design:paramtypes", [_angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -435,14 +439,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _total_outcomes_total_outcomes_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./total-outcomes/total-outcomes.component */ "./src/app/total-outcomes/total-outcomes.component.ts");
 /* harmony import */ var _total_production_total_production_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./total-production/total-production.component */ "./src/app/total-production/total-production.component.ts");
 /* harmony import */ var _total_farms_total_farms_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./total-farms/total-farms.component */ "./src/app/total-farms/total-farms.component.ts");
-/* harmony import */ var ng2_charts__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ng2-charts */ "./node_modules/ng2-charts/index.js");
-/* harmony import */ var ng2_charts__WEBPACK_IMPORTED_MODULE_33___default = /*#__PURE__*/__webpack_require__.n(ng2_charts__WEBPACK_IMPORTED_MODULE_33__);
+/* harmony import */ var _terms_of_use_terms_of_use_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./terms-of-use/terms-of-use.component */ "./src/app/terms-of-use/terms-of-use.component.ts");
+/* harmony import */ var ng2_charts__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ng2-charts */ "./node_modules/ng2-charts/index.js");
+/* harmony import */ var ng2_charts__WEBPACK_IMPORTED_MODULE_34___default = /*#__PURE__*/__webpack_require__.n(ng2_charts__WEBPACK_IMPORTED_MODULE_34__);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -494,14 +500,15 @@ var AppModule = /** @class */ (function () {
                 _total_incomes_total_incomes_component__WEBPACK_IMPORTED_MODULE_29__["TotalIncomesComponent"],
                 _total_outcomes_total_outcomes_component__WEBPACK_IMPORTED_MODULE_30__["TotalOutcomesComponent"],
                 _total_production_total_production_component__WEBPACK_IMPORTED_MODULE_31__["TotalProductionComponent"],
-                _total_farms_total_farms_component__WEBPACK_IMPORTED_MODULE_32__["TotalFarmsComponent"]
+                _total_farms_total_farms_component__WEBPACK_IMPORTED_MODULE_32__["TotalFarmsComponent"],
+                _terms_of_use_terms_of_use_component__WEBPACK_IMPORTED_MODULE_33__["TermsOfUseComponent"]
             ],
             imports: [
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_0__["BrowserAnimationsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_8__["FormsModule"],
                 _angular_http__WEBPACK_IMPORTED_MODULE_3__["HttpModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
-                ng2_charts__WEBPACK_IMPORTED_MODULE_33__["ChartsModule"],
+                ng2_charts__WEBPACK_IMPORTED_MODULE_34__["ChartsModule"],
                 _components_components_module__WEBPACK_IMPORTED_MODULE_15__["ComponentsModule"],
                 _angular_router__WEBPACK_IMPORTED_MODULE_6__["RouterModule"].forRoot(_app_routing__WEBPACK_IMPORTED_MODULE_14__["AppRoutes"], { onSameUrlNavigation: 'reload', enableTracing: true }),
                 _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__["NgbModule"].forRoot(),
@@ -547,7 +554,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _total_outcomes_total_outcomes_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./total-outcomes/total-outcomes.component */ "./src/app/total-outcomes/total-outcomes.component.ts");
 /* harmony import */ var _total_production_total_production_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./total-production/total-production.component */ "./src/app/total-production/total-production.component.ts");
 /* harmony import */ var _total_farms_total_farms_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./total-farms/total-farms.component */ "./src/app/total-farms/total-farms.component.ts");
-/* harmony import */ var _core_auth_guard__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./core/auth.guard */ "./src/app/core/auth.guard.ts");
+/* harmony import */ var _terms_of_use_terms_of_use_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./terms-of-use/terms-of-use.component */ "./src/app/terms-of-use/terms-of-use.component.ts");
+/* harmony import */ var _core_auth_guard__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./core/auth.guard */ "./src/app/core/auth.guard.ts");
+
 
 
 
@@ -564,32 +573,29 @@ var AppRoutes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
     { path: 'login', component: _login_login_component__WEBPACK_IMPORTED_MODULE_3__["LoginComponent"] },
     { path: 'register', component: _register_register_component__WEBPACK_IMPORTED_MODULE_4__["RegisterComponent"] },
+    { path: 'terms-of-use', component: _terms_of_use_terms_of_use_component__WEBPACK_IMPORTED_MODULE_11__["TermsOfUseComponent"] },
     {
         path: '', component: _layouts_admin_layout_admin_layout_component__WEBPACK_IMPORTED_MODULE_0__["AdminLayoutComponent"], children: [
-            { path: '', loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule', canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_11__["AuthGuard"]] },
-            { path: 'dashboard', component: _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_5__["DashboardComponent"], canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_11__["AuthGuard"]] },
-            { path: 'user-profile', component: _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_6__["UserProfileComponent"], canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_11__["AuthGuard"]] },
-            { path: 'total-incomes', component: _total_incomes_total_incomes_component__WEBPACK_IMPORTED_MODULE_7__["TotalIncomesComponent"], canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_11__["AuthGuard"]] },
-            { path: 'total-outcomes', component: _total_outcomes_total_outcomes_component__WEBPACK_IMPORTED_MODULE_8__["TotalOutcomesComponent"], canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_11__["AuthGuard"]] },
-            { path: 'total-production', component: _total_production_total_production_component__WEBPACK_IMPORTED_MODULE_9__["TotalProductionComponent"], canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_11__["AuthGuard"]] },
-            { path: 'total-farms', component: _total_farms_total_farms_component__WEBPACK_IMPORTED_MODULE_10__["TotalFarmsComponent"], canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_11__["AuthGuard"]] }
+            { path: '', loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule', canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]] },
+            { path: 'dashboard', component: _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_5__["DashboardComponent"], canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]] },
+            { path: 'user-profile', component: _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_6__["UserProfileComponent"], canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]] },
+            { path: 'total-incomes', component: _total_incomes_total_incomes_component__WEBPACK_IMPORTED_MODULE_7__["TotalIncomesComponent"], canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]] },
+            { path: 'total-outcomes', component: _total_outcomes_total_outcomes_component__WEBPACK_IMPORTED_MODULE_8__["TotalOutcomesComponent"], canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]] },
+            { path: 'total-production', component: _total_production_total_production_component__WEBPACK_IMPORTED_MODULE_9__["TotalProductionComponent"], canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]] },
+            { path: 'total-farms', component: _total_farms_total_farms_component__WEBPACK_IMPORTED_MODULE_10__["TotalFarmsComponent"], canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]] }
         ]
     },
     {
         path: '', component: _layouts_farmer_layout_farmer_layout_component__WEBPACK_IMPORTED_MODULE_1__["FarmerLayoutComponent"], children: [
-            { path: '', loadChildren: './layouts/farmer-layout/farmer-layout.module#FarmerLayoutModule', canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_11__["AuthGuard"]] },
-            { path: 'user-profile', component: _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_6__["UserProfileComponent"], canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_11__["AuthGuard"]] }
+            { path: '', loadChildren: './layouts/farmer-layout/farmer-layout.module#FarmerLayoutModule', canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]] },
+            { path: 'user-profile', component: _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_6__["UserProfileComponent"], canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]] }
         ]
     },
     {
         path: '', component: _layouts_consultant_layout_consultant_layout_component__WEBPACK_IMPORTED_MODULE_2__["ConsultantLayoutComponent"], children: [
-            { path: '', loadChildren: './layouts/consultant-layout/consultant-layout.module#ConsultantLayoutModule', canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_11__["AuthGuard"]] },
-            { path: 'dashboard', component: _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_5__["DashboardComponent"], canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_11__["AuthGuard"]] },
-            { path: 'user-profile', component: _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_6__["UserProfileComponent"], canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_11__["AuthGuard"]] },
-            { path: 'total-incomes', component: _total_incomes_total_incomes_component__WEBPACK_IMPORTED_MODULE_7__["TotalIncomesComponent"], canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_11__["AuthGuard"]] },
-            { path: 'total-outcomes', component: _total_outcomes_total_outcomes_component__WEBPACK_IMPORTED_MODULE_8__["TotalOutcomesComponent"], canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_11__["AuthGuard"]] },
-            { path: 'total-production', component: _total_production_total_production_component__WEBPACK_IMPORTED_MODULE_9__["TotalProductionComponent"], canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_11__["AuthGuard"]] },
-            { path: 'total-farms', component: _total_farms_total_farms_component__WEBPACK_IMPORTED_MODULE_10__["TotalFarmsComponent"], canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_11__["AuthGuard"]] }
+            { path: '', loadChildren: './layouts/consultant-layout/consultant-layout.module#ConsultantLayoutModule', canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]] },
+            { path: 'dashboard', component: _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_5__["DashboardComponent"], canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]] },
+            { path: 'user-profile', component: _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_6__["UserProfileComponent"], canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]] }
         ]
     },
     { path: '**', redirectTo: 'login' }
@@ -609,13 +615,14 @@ var AppRoutes = [
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ComponentsModule", function() { return ComponentsModule; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
-/* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./footer/footer.component */ "./src/app/components/footer/footer.component.ts");
-/* harmony import */ var _navbar_navbar_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./navbar/navbar.component */ "./src/app/components/navbar/navbar.component.ts");
-/* harmony import */ var _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./sidebar/sidebar.component */ "./src/app/components/sidebar/sidebar.component.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./footer/footer.component */ "./src/app/components/footer/footer.component.ts");
+/* harmony import */ var _navbar_navbar_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./navbar/navbar.component */ "./src/app/components/navbar/navbar.component.ts");
+/* harmony import */ var _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./sidebar/sidebar.component */ "./src/app/components/sidebar/sidebar.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -630,26 +637,29 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var ComponentsModule = /** @class */ (function () {
     function ComponentsModule() {
     }
     ComponentsModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
-            imports: [
-                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
-                _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"],
-                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__["NgbModule"],
-                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__["BrowserModule"]
-            ],
             declarations: [
-                _footer_footer_component__WEBPACK_IMPORTED_MODULE_5__["FooterComponent"],
-                _navbar_navbar_component__WEBPACK_IMPORTED_MODULE_6__["NavbarComponent"],
-                _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_7__["SidebarComponent"]
+                _footer_footer_component__WEBPACK_IMPORTED_MODULE_6__["FooterComponent"],
+                _navbar_navbar_component__WEBPACK_IMPORTED_MODULE_7__["NavbarComponent"],
+                _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_8__["SidebarComponent"]
+            ],
+            imports: [
+                _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+                _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["NgbModule"],
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__["BrowserModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormsModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_1__["ReactiveFormsModule"]
             ],
             exports: [
-                _footer_footer_component__WEBPACK_IMPORTED_MODULE_5__["FooterComponent"],
-                _navbar_navbar_component__WEBPACK_IMPORTED_MODULE_6__["NavbarComponent"],
-                _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_7__["SidebarComponent"]
+                _footer_footer_component__WEBPACK_IMPORTED_MODULE_6__["FooterComponent"],
+                _navbar_navbar_component__WEBPACK_IMPORTED_MODULE_7__["NavbarComponent"],
+                _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_8__["SidebarComponent"]
             ]
         })
     ], ComponentsModule);
@@ -678,7 +688,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<footer class=\"footer\">\n  <div class=\"container-fluid\">\n    <nav>\n      <ul>\n        <li>\n          <a href=\"#\">\n            Terms of Use\n          </a>\n        </li>\n      </ul>\n    </nav>\n    <div class=\"copyright\">\n      &copy;\n      {{test | date: 'yyyy'}}, Olive Oil Famrers Production M.S.\n    </div>\n  </div>\n</footer>"
+module.exports = "<footer class=\"footer\">\n  <div class=\"container-fluid\">\n    <nav>\n      <ul>\n        <li>\n          <a routerLink=\"/terms-of-use\">\n            Terms of Use\n          </a>\n        </li>\n      </ul>\n    </nav>\n    <div class=\"copyright\">\n      &copy;\n      {{test | date: 'yyyy'}}, Made for Olive Oil Famrers\n    </div>\n  </div>\n</footer>"
 
 /***/ }),
 
@@ -731,7 +741,7 @@ var FooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvbmF2YmFyL25hdmJhci5jb21wb25lbnQuY3NzIn0= */"
+module.exports = ".nav-selector {\r\n    padding: 5px 20px !important;\r\n  }\r\n  .selector{\r\n    margin-left: 1rem;\r\n    margin-right: 1rem;\r\n  }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9uYXZiYXIvbmF2YmFyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSw2QkFBNkI7R0FDOUI7RUFDRDtJQUNFLGtCQUFrQjtJQUNsQixtQkFBbUI7R0FDcEIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL25hdmJhci9uYXZiYXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5uYXYtc2VsZWN0b3Ige1xyXG4gICAgcGFkZGluZzogNXB4IDIwcHggIWltcG9ydGFudDtcclxuICB9XHJcbiAgLnNlbGVjdG9ye1xyXG4gICAgbWFyZ2luLWxlZnQ6IDFyZW07XHJcbiAgICBtYXJnaW4tcmlnaHQ6IDFyZW07XHJcbiAgfSJdfQ== */"
 
 /***/ }),
 
@@ -742,7 +752,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-lg navbar-transparent  navbar-absolute bg-primary fixed-top\">\n  <div class=\"container-fluid\">\n\n\n    <div class=\"navbar-wrapper\">\n      <div class=\"navbar-toggle\">\n        <button type=\"button\" class=\"navbar-toggler\" (click)=\"sidebarToggle()\">\n          <span class=\"navbar-toggler-bar bar1\"></span>\n          <span class=\"navbar-toggler-bar bar2\"></span>\n          <span class=\"navbar-toggler-bar bar3\"></span>\n        </button>\n      </div>\n    </div>\n\n    <!--  <button class=\"navbar-toggler\" type=\"button\" (click)=\"collapse()\" [attr.aria-expanded]=\"!isCollapsed\" aria-controls=\"collapseExample\">\n      <span class=\"navbar-toggler-bar navbar-kebab\"></span>\n      <span class=\"navbar-toggler-bar navbar-kebab\"></span>\n      <span class=\"navbar-toggler-bar navbar-kebab\"></span>\n    </button> -->\n    <!-- <button class=\"btn btn-link\" (click)=\"logout()\">\n      <i class=\"now-ui-icons media-2_sound-wave\"></i>\n    </button> -->\n\n    <div class=\"collapse navbar-collapse justify-content-end\" id=\"collapseExample\" [ngbCollapse]=\"isCollapsed\">\n      <ul class=\"navbar-nav\">\n        <li class=\"nav-item\">\n          <button class=\"btn btn-link nav-link\" (click)=\"logout()\">\n            <i class=\"now-ui-icons media-2_sound-wave\"></i>\n            <p>\n              <span class=\"d-lg-none d-md-block\">Logout</span>\n            </p>\n          </button>\n        </li>\n      </ul>\n    </div>\n\n    \n  </div>\n</nav>"
+module.exports = "<nav class=\"navbar navbar-expand-lg navbar-transparent navbar-absolute bg-primary fixed-top\">\n  <div class=\"container-fluid\">\n    <div class=\"navbar-wrapper\">\n      <div class=\"navbar-toggle\">\n        <button type=\"button\" class=\"navbar-toggler\" (click)=\"sidebarToggle()\">\n          <span class=\"navbar-toggler-bar bar1\"></span>\n          <span class=\"navbar-toggler-bar bar2\"></span>\n          <span class=\"navbar-toggler-bar bar3\"></span>\n        </button>\n      </div>\n    </div>\n    <button class=\"navbar-toggler\" type=\"button\" (click)=\"collapse()\" [attr.aria-expanded]=\"!isCollapsed\" aria-controls=\"collapseExample\">\n      <span class=\"navbar-toggler-bar navbar-kebab\"></span>\n      <span class=\"navbar-toggler-bar navbar-kebab\"></span>\n      <span class=\"navbar-toggler-bar navbar-kebab\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse justify-content-end\" id=\"collapseExample\" [ngbCollapse]=\"isCollapsed\">\n      <ul class=\"navbar-nav\">\n        <li class=\"nav-item selector\">\n          <select class=\"form-control btn btn-link nav-link nav-selector\" name=\"year\" #year=\"ngModel\" [(ngModel)]=\"this.contentService.tempYear\"\n            (change)=\"changeYear(year.value)\">\n            <option *ngFor=\"let yearValue of yearList;\" [value]=\"yearValue\">{{yearValue}}</option>\n          </select>\n        </li>\n        <li class=\"nav-item\" *ngIf=\"user.role!=='farmer'\">\n          <button class=\"btn btn-link nav-link nav-selector\" (click)=\"refreshStatistics()\">\n            <i class=\"now-ui-icons loader_refresh spin\"></i>\n            <p>\n              <span class=\"d-lg-none d-md-block\">Refresh Production</span>\n            </p>\n          </button>\n        </li>\n        <li class=\"nav-item\">\n          <button class=\"btn btn-link nav-link nav-selector\" (click)=\"logout()\">\n            <i class=\"now-ui-icons arrows-1_cloud-download-93\"></i>\n            <p>\n              <span class=\"d-lg-none d-md-block\">Logout</span>\n            </p>\n          </button>\n        </li>\n      </ul>\n    </div>\n  </div>\n</nav>"
 
 /***/ }),
 
@@ -763,6 +773,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core_auth_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../core/auth.service */ "./src/app/core/auth.service.ts");
 /* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/database/index.js");
 /* harmony import */ var _core_user__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../core/user */ "./src/app/core/user.ts");
+/* harmony import */ var _core_content_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../core/content.service */ "./src/app/core/content.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -781,21 +792,45 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var NavbarComponent = /** @class */ (function () {
-    function NavbarComponent(afDb, authService, location, element, router) {
+    function NavbarComponent(afDb, authService, contentService, location, element, router) {
         this.afDb = afDb;
         this.authService = authService;
+        this.contentService = contentService;
         this.element = element;
         this.router = router;
         this.mobile_menu_visible = 0;
         this.isCollapsed = true;
         this.user = new _core_user__WEBPACK_IMPORTED_MODULE_6__["User"];
+        this.yearList = ['2019', '2018', '2017', '2016', '2015', '2014', '2013', '2012', '2011', '2010', '2009'];
         this.location = location;
         this.sidebarVisible = false;
+        this.contentService.getFarmStatistics();
+        this.contentService.getIncomeStatistics();
+        this.userID = this.authService.getCurrentUserId();
     }
+    NavbarComponent.prototype.refreshStatistics = function () {
+        this.contentService.refreshFarmStats();
+        this.contentService.refreshProductionStats();
+        this.contentService.refreshOutcomeStats();
+        this.contentService.refreshIncomeStats();
+    };
+    NavbarComponent.prototype.changeYear = function (year) {
+        if (this.user.role !== 'farmer') {
+            this.contentService.tempYear = year;
+            this.contentService.refreshFarmStats();
+            this.contentService.refreshProductionStats();
+            this.contentService.refreshOutcomeStats();
+            this.contentService.refreshIncomeStats();
+        }
+        else {
+            this.contentService.callComponentMethod();
+        }
+    };
     NavbarComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.listTitles = _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_1__["ADMINISTRATOR_ROUTES"].filter(function (listTitle) { return listTitle; });
+        this.retriveData();
         var navbar = this.element.nativeElement;
         this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
         this.router.events.subscribe(function (event) {
@@ -809,8 +844,7 @@ var NavbarComponent = /** @class */ (function () {
     };
     NavbarComponent.prototype.retriveData = function () {
         var _this = this;
-        var id = this.authService.getCurrentUserId();
-        this.userReference = this.afDb.object('users/' + id);
+        this.userReference = this.afDb.object('users/' + this.userID);
         this.userReference.snapshotChanges().subscribe(function (action) {
             _this.user = action.payload.val();
             if (_this.user.role === 'administrator') {
@@ -928,8 +962,8 @@ var NavbarComponent = /** @class */ (function () {
     NavbarComponent.prototype.logout = function () {
         this.router.navigate(['/login']);
         this.authService.doLogout()
-            .then(function (res) {
-            console.log('Logout OK');
+            .then(function (result) {
+            console.log('Logout OK' + result);
         }, function (error) {
             console.log('Logout error', error);
         });
@@ -942,6 +976,7 @@ var NavbarComponent = /** @class */ (function () {
         }),
         __metadata("design:paramtypes", [_angular_fire_database__WEBPACK_IMPORTED_MODULE_5__["AngularFireDatabase"],
             _core_auth_service__WEBPACK_IMPORTED_MODULE_4__["AuthService"],
+            _core_content_service__WEBPACK_IMPORTED_MODULE_7__["ContentService"],
             _angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"],
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"],
             _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
@@ -989,9 +1024,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CONSULTANT_ROUTES", function() { return CONSULTANT_ROUTES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SidebarComponent", function() { return SidebarComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _core_user__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../core/user */ "./src/app/core/user.ts");
-/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/database/index.js");
-/* harmony import */ var _core_auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../core/auth.service */ "./src/app/core/auth.service.ts");
+/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/database/index.js");
+/* harmony import */ var _core_auth_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../core/auth.service */ "./src/app/core/auth.service.ts");
+/* harmony import */ var _core_user__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../core/user */ "./src/app/core/user.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1024,17 +1059,17 @@ var FARMER_ROUTES = [
 ];
 var CONSULTANT_ROUTES = [
     { path: '/dashboard', title: 'Dashboard', icon: 'business_chart-bar-32', class: '' },
-    { path: '/user-profile', title: 'User Profile', icon: 'users_single-02', class: '' }
+    { path: '/user-profile', title: 'User Profile', icon: 'users_single-02', class: '' },
+    { path: '/consulting', title: 'Consulting', icon: 'education_hat', class: '' }
 ];
 var SidebarComponent = /** @class */ (function () {
     function SidebarComponent(afDb, authService) {
         this.afDb = afDb;
         this.authService = authService;
-        this.user = new _core_user__WEBPACK_IMPORTED_MODULE_1__["User"];
+        this.user = new _core_user__WEBPACK_IMPORTED_MODULE_3__["User"];
         this.retriveData();
     }
-    SidebarComponent.prototype.ngOnInit = function () {
-    };
+    SidebarComponent.prototype.ngOnInit = function () { };
     SidebarComponent.prototype.isMobileMenu = function () {
         if (window.innerWidth > 991) {
             return false;
@@ -1065,8 +1100,8 @@ var SidebarComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./sidebar.component.html */ "./src/app/components/sidebar/sidebar.component.html"),
             styles: [__webpack_require__(/*! ./sidebar.component.css */ "./src/app/components/sidebar/sidebar.component.css")]
         }),
-        __metadata("design:paramtypes", [_angular_fire_database__WEBPACK_IMPORTED_MODULE_2__["AngularFireDatabase"],
-            _core_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"]])
+        __metadata("design:paramtypes", [_angular_fire_database__WEBPACK_IMPORTED_MODULE_1__["AngularFireDatabase"],
+            _core_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"]])
     ], SidebarComponent);
     return SidebarComponent;
 }());
@@ -1141,10 +1176,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthService", function() { return AuthService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/auth/index.js");
-/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/database/index.js");
-/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! firebase/app */ "./node_modules/firebase/app/dist/index.cjs.js");
-/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(firebase_app__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _user__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./user */ "./src/app/core/user.ts");
+/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! firebase/app */ "./node_modules/firebase/app/dist/index.cjs.js");
+/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(firebase_app__WEBPACK_IMPORTED_MODULE_2__);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1157,16 +1190,12 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
-
 var AuthService = /** @class */ (function () {
-    function AuthService(afAuth, afDb) {
+    function AuthService(afAuth) {
         this.afAuth = afAuth;
-        this.afDb = afDb;
-        this.user = new _user__WEBPACK_IMPORTED_MODULE_4__["User"];
     }
     AuthService.prototype.writeUserData = function (userId, provider, email, role) {
-        firebase_app__WEBPACK_IMPORTED_MODULE_3__["database"]().ref('users/' + userId).set({
+        firebase_app__WEBPACK_IMPORTED_MODULE_2__["database"]().ref('users/' + userId).set({
             provider: provider,
             firstName: '',
             lastName: '',
@@ -1180,7 +1209,7 @@ var AuthService = /** @class */ (function () {
     };
     AuthService.prototype.doLogin = function (value) {
         return new Promise(function (resolve, reject) {
-            firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().signInWithEmailAndPassword(value.email, value.password)
+            firebase_app__WEBPACK_IMPORTED_MODULE_2__["auth"]().signInWithEmailAndPassword(value.email, value.password)
                 .then(function (res) {
                 resolve(res);
             }, function (err) { return reject(err); });
@@ -1189,7 +1218,7 @@ var AuthService = /** @class */ (function () {
     AuthService.prototype.doLogout = function () {
         var _this = this;
         return new Promise(function (resolve, reject) {
-            if (firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser) {
+            if (firebase_app__WEBPACK_IMPORTED_MODULE_2__["auth"]().currentUser) {
                 _this.afAuth.auth.signOut();
                 resolve();
             }
@@ -1201,17 +1230,17 @@ var AuthService = /** @class */ (function () {
     AuthService.prototype.doRegister = function (value) {
         var _this = this;
         return new Promise(function (resolve, reject) {
-            firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().createUserWithEmailAndPassword(value.email, value.password)
+            firebase_app__WEBPACK_IMPORTED_MODULE_2__["auth"]().createUserWithEmailAndPassword(value.email, value.password)
                 .then(function (res) {
                 resolve(res);
-                var userId = firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.uid;
-                _this.writeUserData(userId, firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.providerId, value.email, value.role);
+                var userId = firebase_app__WEBPACK_IMPORTED_MODULE_2__["auth"]().currentUser.uid;
+                _this.writeUserData(userId, firebase_app__WEBPACK_IMPORTED_MODULE_2__["auth"]().currentUser.providerId, value.email, value.role);
             }, function (err) { return reject(err); });
         });
     };
     AuthService.prototype.getCurrentUserId = function () {
-        if (firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser !== null) {
-            return firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.uid;
+        if (firebase_app__WEBPACK_IMPORTED_MODULE_2__["auth"]().currentUser !== null) {
+            return firebase_app__WEBPACK_IMPORTED_MODULE_2__["auth"]().currentUser.uid;
         }
         else {
             return null;
@@ -1219,8 +1248,7 @@ var AuthService = /** @class */ (function () {
     };
     AuthService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
-        __metadata("design:paramtypes", [_angular_fire_auth__WEBPACK_IMPORTED_MODULE_1__["AngularFireAuth"],
-            _angular_fire_database__WEBPACK_IMPORTED_MODULE_2__["AngularFireDatabase"]])
+        __metadata("design:paramtypes", [_angular_fire_auth__WEBPACK_IMPORTED_MODULE_1__["AngularFireAuth"]])
     ], AuthService);
     return AuthService;
 }());
@@ -1246,6 +1274,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _production_stats__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./production-stats */ "./src/app/core/production-stats.ts");
 /* harmony import */ var _income_stats__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./income-stats */ "./src/app/core/income-stats.ts");
 /* harmony import */ var _outcome_stats__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./outcome-stats */ "./src/app/core/outcome-stats.ts");
+/* harmony import */ var rxjs_Subject__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs/Subject */ "./node_modules/rxjs-compat/_esm5/Subject.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1262,14 +1291,18 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var ContentService = /** @class */ (function () {
     function ContentService(afDb, afS) {
         this.afDb = afDb;
         this.afS = afS;
+        this.componentMethodCallSource = new rxjs_Subject__WEBPACK_IMPORTED_MODULE_7__["Subject"]();
+        this.calledMethod = this.componentMethodCallSource.asObservable();
         this.incomeStats = new _income_stats__WEBPACK_IMPORTED_MODULE_5__["IncomeStats"]();
         this.outcomeStats = new _outcome_stats__WEBPACK_IMPORTED_MODULE_6__["OutcomeStats"]();
         this.productionStats = new _production_stats__WEBPACK_IMPORTED_MODULE_4__["ProductionStats"]();
-        this.farmStats = new _farm_stats__WEBPACK_IMPORTED_MODULE_3__["FarmStats"]();
+        this.tipsList = this.afDb.list('tips');
+        this.tipsListLimited = this.afDb.list('tips', function (ref) { return ref.limitToFirst(5).orderByChild('registrationDate'); });
         this.usersList = this.afDb.list('users');
         this.farmsList = this.afDb.list('farms');
         this.incomesList = this.afDb.list('incomes');
@@ -1280,32 +1313,208 @@ var ContentService = /** @class */ (function () {
         this.productionStatsList = this.afDb.list('production-stats');
         this.farmStatsList = this.afDb.list('farm-stats');
         this.regionsList = this.afDb.list('regions');
+        this.tempYear = (new Date).getFullYear();
     }
-    ContentService.prototype.refreshProductionStats = function () {
-        /* this.productionList.snapshotChanges().subscribe(item => {
-            this.prList = [];
-            item.forEach(element => {
-                const y = element.payload.toJSON();
-                y['pid'] = element.key;
-                this.productionList.push(y as Production);
-            });
-        }); */
+    ContentService.prototype.callComponentMethod = function () {
+        this.componentMethodCallSource.next();
     };
-    ContentService.prototype.refreshFarmStats = function () {
+    ContentService.prototype.initProductionStats = function () {
+        this.productionStatsList.remove();
+        this.newProductionStats = [];
+    };
+    ContentService.prototype.refreshProductionStats = function () {
         var _this = this;
-        this.farmStatsList.remove();
-        this.farmsList.snapshotChanges().subscribe(function (item) {
-            var x = 0;
-            var tempS;
+        this.initProductionStats();
+        var subscription = this.productionList.snapshotChanges().subscribe(function (item) {
+            var index = 0;
             item.forEach(function (element) {
                 var y = element.payload.toJSON();
-                _this.editFarmStatistics(y, tempS);
+                y['psid'] = element.key;
+                _this.refreshProductionStatistics(y);
+                index++;
+                if (index === item.length) {
+                    subscription.unsubscribe();
+                    _this.refreshPr();
+                }
             });
         });
     };
+    ContentService.prototype.refreshProductionStatistics = function (production) {
+        var date = new Date(production.registrationDate);
+        var monthYear = String((date.getMonth()) + 1) + '/' + String(date.getFullYear());
+        var ammountWeight = production.ammountWeight;
+        var tempStats = [];
+        var st = new _production_stats__WEBPACK_IMPORTED_MODULE_4__["ProductionStats"]();
+        var index;
+        if (this.newProductionStats.length !== 0) {
+            tempStats = this.newProductionStats.filter(function (stats) { return stats.date === monthYear; });
+            index = this.newProductionStats.findIndex(function (stats) { return stats.date === monthYear; });
+            if (tempStats.length !== 0) {
+                st = tempStats[0];
+                st.ammountWeight = st.ammountWeight + ammountWeight;
+                this.newProductionStats.splice(index, 1, st);
+            }
+            else {
+                st.ammountWeight = ammountWeight;
+                st.date = monthYear;
+                this.newProductionStats.push(st);
+            }
+        }
+        else {
+            st.ammountWeight = ammountWeight;
+            st.date = monthYear;
+            this.newProductionStats.push(st);
+        }
+    };
+    ContentService.prototype.refreshPr = function () {
+        for (var i = 0; i < this.newProductionStats.length; i++) {
+            this.insertProductionStats(this.newProductionStats[i]);
+        }
+    };
+    ContentService.prototype.initFarmStats = function () {
+        this.farmStatsList.remove();
+        this.statsListFa = [];
+        var s1 = new _farm_stats__WEBPACK_IMPORTED_MODULE_3__["FarmStats"]();
+        s1.region = 'Heraklion Crete';
+        s1.size = 0;
+        s1.registrationDate = new Date();
+        this.statsListFa.splice(0, 0, s1);
+        var s2 = new _farm_stats__WEBPACK_IMPORTED_MODULE_3__["FarmStats"]();
+        s2.region = 'Chania Crete';
+        s2.size = 0;
+        s2.registrationDate = new Date();
+        this.statsListFa.splice(1, 0, s2);
+        var s3 = new _farm_stats__WEBPACK_IMPORTED_MODULE_3__["FarmStats"]();
+        s3.region = 'Rethimnon Crete';
+        s3.size = 0;
+        s3.registrationDate = new Date();
+        this.statsListFa.splice(2, 0, s3);
+        var s4 = new _farm_stats__WEBPACK_IMPORTED_MODULE_3__["FarmStats"]();
+        s4.region = 'Lasithi Crete';
+        s4.size = 0;
+        s4.registrationDate = new Date();
+        this.statsListFa.splice(3, 0, s4);
+        this.insertFarmStats(s1);
+        this.insertFarmStats(s2);
+        this.insertFarmStats(s3);
+        this.insertFarmStats(s4);
+    };
+    ContentService.prototype.refreshFarmStats = function () {
+        var _this = this;
+        this.initFarmStats();
+        this.farmsList.snapshotChanges().subscribe(function (item) {
+            item.forEach(function (element) {
+                var y = element.payload.toJSON();
+                y['fsid'] = element.key;
+                _this.editFarmStatistics(y);
+            });
+        });
+    };
+    ContentService.prototype.initIncomeStats = function () {
+        this.incomeStatsList.remove();
+        this.newIncomeStats = [];
+    };
     ContentService.prototype.refreshIncomeStats = function () {
+        var _this = this;
+        this.initIncomeStats();
+        var subscription = this.incomesList.snapshotChanges().subscribe(function (item) {
+            var index = 0;
+            item.forEach(function (element) {
+                var y = element.payload.toJSON();
+                y['isid'] = element.key;
+                _this.refreshIncomeStatistics(y);
+                index++;
+                if (index === item.length) {
+                    subscription.unsubscribe();
+                    _this.refreshIn();
+                }
+            });
+        });
+    };
+    ContentService.prototype.refreshIncomeStatistics = function (income) {
+        var date = new Date(income.registrationDate);
+        var monthYear = String((date.getMonth()) + 1) + '/' + String(date.getFullYear());
+        var ammount = income.ammount;
+        var tempStats = [];
+        var st = new _income_stats__WEBPACK_IMPORTED_MODULE_5__["IncomeStats"]();
+        var index;
+        if (this.newIncomeStats.length !== 0) {
+            tempStats = this.newIncomeStats.filter(function (stats) { return stats.date === monthYear; });
+            index = this.newIncomeStats.findIndex(function (stats) { return stats.date === monthYear; });
+            if (tempStats.length !== 0) {
+                st = tempStats[0];
+                st.ammount = st.ammount + ammount;
+                this.newIncomeStats.splice(index, 1, st);
+            }
+            else {
+                st.ammount = ammount;
+                st.date = monthYear;
+                this.newIncomeStats.push(st);
+            }
+        }
+        else {
+            st.ammount = ammount;
+            st.date = monthYear;
+            this.newIncomeStats.push(st);
+        }
+    };
+    ContentService.prototype.refreshIn = function () {
+        for (var i = 0; i < this.newIncomeStats.length; i++) {
+            this.insertIncomeStats(this.newIncomeStats[i]);
+        }
+    };
+    ContentService.prototype.initOutcomeStats = function () {
+        this.outcomeStatsList.remove();
+        this.newOutcomeStats = [];
     };
     ContentService.prototype.refreshOutcomeStats = function () {
+        var _this = this;
+        this.initOutcomeStats();
+        var subscription = this.outcomesList.snapshotChanges().subscribe(function (item) {
+            var index = 0;
+            item.forEach(function (element) {
+                var y = element.payload.toJSON();
+                y['osid'] = element.key;
+                _this.refreshOutcomeStatistics(y);
+                index++;
+                if (index === item.length) {
+                    subscription.unsubscribe();
+                    _this.refreshOut();
+                }
+            });
+        });
+    };
+    ContentService.prototype.refreshOutcomeStatistics = function (outcome) {
+        var date = new Date(outcome.registrationDate);
+        var monthYear = String((date.getMonth()) + 1) + '/' + String(date.getFullYear());
+        var ammount = outcome.ammount;
+        var tempStats = [];
+        var st = new _outcome_stats__WEBPACK_IMPORTED_MODULE_6__["OutcomeStats"]();
+        var index;
+        if (this.newOutcomeStats.length !== 0) {
+            tempStats = this.newOutcomeStats.filter(function (stats) { return stats.date === monthYear; });
+            index = this.newOutcomeStats.findIndex(function (stats) { return stats.date === monthYear; });
+            if (tempStats.length !== 0) {
+                st = tempStats[0];
+                st.ammount = st.ammount + ammount;
+                this.newOutcomeStats.splice(index, 1, st);
+            }
+            else {
+                st.ammount = ammount;
+                st.date = monthYear;
+                this.newOutcomeStats.push(st);
+            }
+        }
+        else {
+            st.ammount = ammount;
+            st.date = monthYear;
+            this.newOutcomeStats.push(st);
+        }
+    };
+    ContentService.prototype.refreshOut = function () {
+        for (var i = 0; i < this.newOutcomeStats.length; i++) {
+            this.insertOutcomeStats(this.newOutcomeStats[i]);
+        }
     };
     ContentService.prototype.getfarmStats = function () {
         this.farmStatsList = this.afDb.list('farm-stats');
@@ -1314,6 +1523,35 @@ var ContentService = /** @class */ (function () {
     ContentService.prototype.getRegions = function () {
         this.regionsList = this.afDb.list('regions');
         return this.regionsList;
+    };
+    ContentService.prototype.getTipsLimitedData = function () {
+        this.tipsListLimited = this.afDb.list('tips', function (ref) { return ref.limitToFirst(5).orderByChild('registrationDate'); });
+        return this.tipsListLimited;
+    };
+    ContentService.prototype.getTipsData = function () {
+        this.tipsList = this.afDb.list('tips');
+        return this.tipsList;
+    };
+    ContentService.prototype.insertTip = function (tip) {
+        this.tipsList.push({
+            cid: tip.cid,
+            title: tip.title,
+            content: tip.content,
+            tag: tip.tag,
+            registrationDate: new Date().getTime()
+        });
+    };
+    ContentService.prototype.updateTip = function (tip) {
+        this.tipsList.update(tip.tid, {
+            cid: tip.cid,
+            title: tip.title,
+            content: tip.content,
+            tag: tip.tag,
+            registrationDate: new Date().getTime()
+        });
+    };
+    ContentService.prototype.deleteTip = function (tid) {
+        this.tipsList.remove(tid);
     };
     ContentService.prototype.getUsersData = function () {
         this.usersList = this.afDb.list('users');
@@ -1336,6 +1574,10 @@ var ContentService = /** @class */ (function () {
         this.farmsList = this.afDb.list('farms');
         return this.farmsList;
     };
+    ContentService.prototype.getFarmsDataId = function (fid) {
+        this.farmsList = this.afDb.list('farms', function (ref) { return ref.orderByChild('farmerid').equalTo(fid); });
+        return this.farmsList;
+    };
     ContentService.prototype.insertFarm = function (farm) {
         this.farmsList.push({
             farmerid: farm.farmerid,
@@ -1348,7 +1590,7 @@ var ContentService = /** @class */ (function () {
             description: farm.description,
             registrationDate: new Date().getTime()
         });
-        this.editFarmStatistics(farm, this.statsListFa);
+        this.editFarmStatistics(farm);
     };
     ContentService.prototype.getFarmStatistics = function () {
         var _this = this;
@@ -1409,67 +1651,70 @@ var ContentService = /** @class */ (function () {
             });
         });
     };
-    ContentService.prototype.editFarmStatistics = function (farm, statsListFa) {
-        if (statsListFa) {
-            if (statsListFa.length !== 0) {
-                if (farm.region === 'Heraklion Crete') {
-                    if (statsListFa[0] !== null) {
-                        this.farmStats.fsid = statsListFa[0].fsid;
-                        this.farmStats.size = statsListFa[0].size + farm.size;
-                        this.farmStats.region = farm.region;
-                        this.updateFarmStats(this.farmStats);
-                    }
-                    else {
-                        this.farmStats.size = farm.size;
-                        this.farmStats.region = farm.region;
-                        this.insertFarmStats(this.farmStats);
-                    }
+    ContentService.prototype.editFarmStatistics = function (farm) {
+        var stats = new _farm_stats__WEBPACK_IMPORTED_MODULE_3__["FarmStats"]();
+        if (this.statsListFa.length !== 0) {
+            if (farm.region === 'Heraklion Crete') {
+                if (this.statsListFa[0]) {
+                    stats.fsid = this.statsListFa[0].fsid;
+                    stats.size = this.statsListFa[0].size + farm.size;
+                    stats.region = farm.region;
+                    this.statsListFa[0].size = stats.size;
+                    this.updateFarmStats(stats);
                 }
-                else if (farm.region === 'Chania Crete') {
-                    if (this.statsListFa[1]) {
-                        this.farmStats.fsid = statsListFa[1].fsid;
-                        this.farmStats.size = statsListFa[1].size + farm.size;
-                        this.farmStats.region = farm.region;
-                        this.updateFarmStats(this.farmStats);
-                    }
-                    else {
-                        this.farmStats.size = farm.size;
-                        this.farmStats.region = farm.region;
-                        this.insertFarmStats(this.farmStats);
-                    }
+                else {
+                    stats.size = farm.size;
+                    stats.region = farm.region;
+                    this.insertFarmStats(stats);
                 }
-                else if (farm.region === 'Rethimnon Crete') {
-                    if (this.statsListFa[2]) {
-                        this.farmStats.fsid = statsListFa[2].fsid;
-                        this.farmStats.size = statsListFa[2].size + farm.size;
-                        this.farmStats.region = farm.region;
-                        this.updateFarmStats(this.farmStats);
-                    }
-                    else {
-                        this.farmStats.size = farm.size;
-                        this.farmStats.region = farm.region;
-                        this.insertFarmStats(this.farmStats);
-                    }
+            }
+            else if (farm.region === 'Chania Crete') {
+                if (this.statsListFa[1]) {
+                    stats.fsid = this.statsListFa[1].fsid;
+                    stats.size = this.statsListFa[1].size + farm.size;
+                    this.statsListFa[1].size = stats.size;
+                    stats.region = farm.region;
+                    this.updateFarmStats(stats);
                 }
-                else if (farm.region === 'Lasithi Crete') {
-                    if (this.statsListFa[3]) {
-                        this.farmStats.fsid = statsListFa[3].fsid;
-                        this.farmStats.size = statsListFa[3].size + farm.size;
-                        this.farmStats.region = farm.region;
-                        this.updateFarmStats(this.farmStats);
-                    }
-                    else {
-                        this.farmStats.size = farm.size;
-                        this.farmStats.region = farm.region;
-                        this.insertFarmStats(this.farmStats);
-                    }
+                else {
+                    stats.size = farm.size;
+                    stats.region = farm.region;
+                    this.insertFarmStats(stats);
+                }
+            }
+            else if (farm.region === 'Rethimnon Crete') {
+                if (this.statsListFa[2]) {
+                    stats.fsid = this.statsListFa[2].fsid;
+                    stats.size = this.statsListFa[2].size + farm.size;
+                    this.statsListFa[2].size = stats.size;
+                    stats.region = farm.region;
+                    this.updateFarmStats(stats);
+                }
+                else {
+                    stats.size = farm.size;
+                    stats.region = farm.region;
+                    this.insertFarmStats(stats);
+                }
+            }
+            else if (farm.region === 'Lasithi Crete') {
+                if (this.statsListFa[3]) {
+                    stats.fsid = this.statsListFa[3].fsid;
+                    stats.size = this.statsListFa[3].size + farm.size;
+                    this.statsListFa[3].size = stats.size;
+                    stats.region = farm.region;
+                    this.updateFarmStats(stats);
+                }
+                else {
+                    stats.size = farm.size;
+                    stats.region = farm.region;
+                    this.insertFarmStats(stats);
                 }
             }
         }
         else {
-            this.farmStats.size = farm.size;
-            this.farmStats.region = farm.region;
-            this.insertFarmStats(this.farmStats);
+            stats.size = farm.size;
+            stats.region = farm.region;
+            this.insertFarmStats(stats);
         }
     };
     ContentService.prototype.updateFarmStats = function (farmStats) {
@@ -1496,7 +1741,7 @@ var ContentService = /** @class */ (function () {
             size: farm.size,
             soil: farm.soil,
             description: farm.description,
-            registrationDate: farm.registrationDate
+            registrationDate: new Date(farm.registrationDate).getTime()
         });
     };
     ContentService.prototype.deleteFarm = function (fid) {
@@ -1512,7 +1757,7 @@ var ContentService = /** @class */ (function () {
             title: income.title,
             ammount: income.ammount,
             description: income.description,
-            registrationDate: new Date().getTime()
+            registrationDate: new Date(income.registrationDate).getTime()
         });
         this.editIncomeStatistics(income);
     };
@@ -1529,7 +1774,7 @@ var ContentService = /** @class */ (function () {
         });
     };
     ContentService.prototype.editIncomeStatistics = function (income) {
-        var date = new Date();
+        var date = new Date(income.registrationDate);
         var monthYear = String((date.getMonth()) + 1) + '/' + String(date.getFullYear());
         var ammount = income.ammount;
         if (this.statsListIn.length !== 0) {
@@ -1574,7 +1819,7 @@ var ContentService = /** @class */ (function () {
             title: income.title,
             ammount: income.ammount,
             description: income.description,
-            registrationDate: income.registrationDate
+            registrationDate: new Date(income.registrationDate).getTime()
         });
     };
     ContentService.prototype.deleteIncome = function (iid) {
@@ -1590,7 +1835,7 @@ var ContentService = /** @class */ (function () {
             title: outcome.title,
             ammount: outcome.ammount,
             description: outcome.description,
-            registrationDate: new Date().getTime()
+            registrationDate: new Date(outcome.registrationDate).getTime()
         });
         this.editOutcomeStatistics(outcome);
     };
@@ -1607,7 +1852,7 @@ var ContentService = /** @class */ (function () {
         });
     };
     ContentService.prototype.editOutcomeStatistics = function (outcome) {
-        var date = new Date();
+        var date = new Date(outcome.registrationDate);
         var monthYear = String((date.getMonth()) + 1) + '/' + String(date.getFullYear());
         var ammount = outcome.ammount;
         if (this.statsListOut.length !== 0) {
@@ -1652,7 +1897,7 @@ var ContentService = /** @class */ (function () {
             title: outcome.title,
             ammount: outcome.ammount,
             description: outcome.description,
-            registrationDate: outcome.registrationDate
+            registrationDate: new Date(outcome.registrationDate).getTime()
         });
     };
     ContentService.prototype.deleteOutcome = function (oid) {
@@ -1665,11 +1910,12 @@ var ContentService = /** @class */ (function () {
     ContentService.prototype.insertProduction = function (production) {
         this.productionList.push({
             farmerid: production.farmerid,
+            farmid: production.farmid,
             title: production.title,
+            units: production.units,
             ammountWeight: production.ammountWeight,
-            ammount: production.ammount,
             description: production.description,
-            registrationDate: new Date().getTime()
+            registrationDate: new Date(production.registrationDate).getTime()
         });
         this.editProductionStatistics(production);
     };
@@ -1686,26 +1932,26 @@ var ContentService = /** @class */ (function () {
         });
     };
     ContentService.prototype.editProductionStatistics = function (production) {
-        var date = new Date();
+        var date = new Date(production.registrationDate);
         var monthYear = String((date.getMonth()) + 1) + '/' + String(date.getFullYear());
         var ammountWeight = production.ammountWeight;
         if (this.statsListPr.length !== 0) {
             this.tempStatsListPr = this.statsListPr.filter(function (stats) { return stats.date === monthYear; });
             if (this.tempStatsListPr.length !== 0) {
                 this.productionStats = this.tempStatsListPr[0];
-                this.productionStats.ammount = this.productionStats.ammount + ammountWeight;
+                this.productionStats.ammountWeight = this.productionStats.ammountWeight + ammountWeight;
                 console.log('Updated production stats.');
                 this.updateProductionStats(this.productionStats);
             }
             else {
-                this.productionStats.ammount = ammountWeight;
+                this.productionStats.ammountWeight = ammountWeight;
                 this.productionStats.date = monthYear;
                 console.log('Added new production stats.');
                 this.insertProductionStats(this.productionStats);
             }
         }
         else {
-            this.productionStats.ammount = ammountWeight;
+            this.productionStats.ammountWeight = ammountWeight;
             this.productionStats.date = monthYear;
             console.log('Added new production stats.');
             this.insertProductionStats(this.productionStats);
@@ -1713,14 +1959,14 @@ var ContentService = /** @class */ (function () {
     };
     ContentService.prototype.updateProductionStats = function (productionStats) {
         this.productionStatsList.update(productionStats.psid, {
-            ammount: productionStats.ammount,
+            ammountWeight: productionStats.ammountWeight,
             date: productionStats.date,
             registrationDate: new Date().getTime()
         });
     };
     ContentService.prototype.insertProductionStats = function (productionStats) {
         this.productionStatsList.push({
-            ammount: productionStats.ammount,
+            ammountWeight: productionStats.ammountWeight,
             date: productionStats.date,
             registrationDate: new Date().getTime()
         });
@@ -1728,11 +1974,12 @@ var ContentService = /** @class */ (function () {
     ContentService.prototype.updateProduction = function (production) {
         this.productionList.update(production.pid, {
             farmerid: production.farmerid,
+            farmid: production.farmid,
             title: production.title,
+            units: production.units,
             ammountWeight: production.ammountWeight,
-            ammount: production.ammount,
             description: production.description,
-            registrationDate: production.registrationDate
+            registrationDate: new Date(production.registrationDate).getTime()
         });
     };
     ContentService.prototype.deleteProduction = function (pid) {
@@ -2013,7 +2260,7 @@ module.exports = ".btn.btn-simple{\r\n    border-color: transparent;\r\n}\r\n.ma
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"panel-header panel-header-lg\">\n  <canvas baseChart id=\"bigDashboardChart\" [datasets]=\"lineBigDashboardChartData\" [labels]=\"lineBigDashboardChartLabels\"\n    [colors]=\"lineBigDashboardChartColors\" [options]=\"lineBigDashboardChartOptions\" [chartType]=\"lineBigDashboardChartType\"\n    (chartHover)=\"chartHovered($event)\" (chartClick)=\"chartClicked($event)\"></canvas>\n</div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-lg-4\">\n      <div class=\"card card-chart\">\n        <div class=\"card-header\">\n          <h5 class=\"card-category\">2018</h5>\n          <h4 class=\"card-title\">Total Famrs</h4>\n          <div class=\"dropdown\">\n            <button type=\"button\" class=\"btn btn-round btn-default btn-simple btn-icon no-caret\" (click)=\"refreshFarms()\">\n              <i class=\"now-ui-icons loader_refresh\"></i>\n            </button>\n          </div>\n        </div>\n        <div class=\"card-body\">\n          <div class=\"chart-area\">\n            <canvas baseChart id=\"farmsChart\" [datasets]=\"farmsChartData\" [labels]=\"farmsChartLabels\" [colors]=\"farmsChartColors\"\n              [options]=\"farmsChartOptions\" [chartType]=\"farmsChartType\" (chartHover)=\"chartHovered($event)\"\n              (chartClick)=\"chartClicked($event)\"></canvas>\n          </div>\n        </div>\n        <div class=\"card-footer\">\n          <div class=\"stats\">\n            <i class=\"now-ui-icons ui-2_chat-round\"></i> Data from farms in Crete in m<sup>2</sup>.\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-lg-4 col-md-6\">\n      <div class=\"card card-chart\">\n        <div class=\"card-header\">\n          <h5 class=\"card-category\">2018</h5>\n          <h4 class=\"card-title\">Total Incomes</h4>\n          <div class=\"dropdown\">\n            <button type=\"button\" class=\"btn btn-round btn-default btn-simple btn-icon no-caret\" (click)=\"refreshIncomes()\">\n              <i class=\"now-ui-icons loader_refresh\"></i>\n            </button>\n          </div>\n        </div>\n        <div class=\"card-body\">\n          <div class=\"chart-area\">\n            <canvas baseChart id=\"incomesChart\" [datasets]=\"incomesChartData\" [labels]=\"incomesChartLabels\" [colors]=\"incomesChartColors\"\n              [options]=\"incomesChartOptions\" [chartType]=\"incomesChartType\" (chartHover)=\"chartHovered($event)\"\n              (chartClick)=\"chartClicked($event)\"></canvas>\n          </div>\n        </div>\n        <div class=\"card-footer\">\n          <div class=\"stats\">\n            <i class=\"now-ui-icons ui-2_chat-round\"></i> Monthly incomes of farmers in €.\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-lg-4 col-md-6\">\n      <div class=\"card card-chart\">\n        <div class=\"card-header\">\n          <h5 class=\"card-category\">2018</h5>\n          <h4 class=\"card-title\">Total Outcomes</h4>\n          <div class=\"dropdown\">\n            <button type=\"button\" class=\"btn btn-round btn-default btn-simple btn-icon no-caret\" (click)=\"refreshOutcomes()\">\n              <i class=\"now-ui-icons loader_refresh\"></i>\n            </button>\n          </div>\n        </div>\n        <div class=\"card-body\">\n          <div class=\"chart-area\">\n            <canvas baseChart id=\"outcomesChart\" [datasets]=\"outcomesChartData\" [labels]=\"outcomesChartLabels\" [colors]=\"outcomesChartColors\"\n              [options]=\"outcomesChartOptions\" [chartType]=\"outcomesChartType\" (chartHover)=\"chartHovered($event)\"\n              (chartClick)=\"chartClicked($event)\"></canvas>\n          </div>\n        </div>\n        <div class=\"card-footer\">\n          <div class=\"stats\">\n            <i class=\"now-ui-icons ui-2_chat-round\"></i> Monthly outcomes of farmers in €.\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div class=\"card-header\">\n          <h4 class=\"card-title\">Production per Region</h4>\n        </div>\n        <div class=\"map-panel\">\n          <div id=\"map1\" class=\"map\"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div class=\"card-header\">\n          <h4 class=\"card-title\">Farms per Region</h4>\n        </div>\n        <div class=\"map-panel\">\n          <div id=\"map2\" class=\"map\"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"panel-header panel-header-lg\">\n  <canvas baseChart id=\"bigDashboardChart\" [datasets]=\"lineBigDashboardChartData\" [labels]=\"lineBigDashboardChartLabels\"\n    [colors]=\"lineBigDashboardChartColors\" [options]=\"lineBigDashboardChartOptions\" [chartType]=\"lineBigDashboardChartType\"\n    (chartHover)=\"chartHovered($event)\" (chartClick)=\"chartClicked($event)\"></canvas>\n</div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-lg-4\">\n      <div class=\"card card-chart\">\n        <div class=\"card-header\">\n          <h5 class=\"card-category\">{{this.contentService.tempYear}}</h5>\n          <h4 class=\"card-title\">Total Farms</h4>\n        </div>\n        <div class=\"card-body\">\n          <div class=\"chart-area\">\n            <canvas baseChart id=\"farmsChart\" [datasets]=\"farmsChartData\" [labels]=\"farmsChartLabels\" [colors]=\"farmsChartColors\"\n              [options]=\"farmsChartOptions\" [chartType]=\"farmsChartType\" (chartHover)=\"chartHovered($event)\"\n              (chartClick)=\"chartClicked($event)\"></canvas>\n          </div>\n        </div>\n        <div class=\"card-footer\">\n          <div class=\"stats\">\n            <i class=\"now-ui-icons ui-2_chat-round\"></i> Data from farms in Crete in m<sup>2</sup>.\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-lg-4 col-md-6\">\n      <div class=\"card card-chart\">\n        <div class=\"card-header\">\n          <h5 class=\"card-category\">{{this.contentService.tempYear}}</h5>\n          <h4 class=\"card-title\">Total Incomes</h4>\n        </div>\n        <div class=\"card-body\">\n          <div class=\"chart-area\">\n            <canvas baseChart id=\"incomesChart\" [datasets]=\"incomesChartData\" [labels]=\"incomesChartLabels\" [colors]=\"incomesChartColors\"\n              [options]=\"incomesChartOptions\" [chartType]=\"incomesChartType\" (chartHover)=\"chartHovered($event)\"\n              (chartClick)=\"chartClicked($event)\"></canvas>\n          </div>\n        </div>\n        <div class=\"card-footer\">\n          <div class=\"stats\">\n            <i class=\"now-ui-icons ui-2_chat-round\"></i> Monthly incomes of farmers in €.\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-lg-4 col-md-6\">\n      <div class=\"card card-chart\">\n        <div class=\"card-header\">\n          <h5 class=\"card-category\">{{this.contentService.tempYear}}</h5>\n          <h4 class=\"card-title\">Total Outcomes</h4>\n        </div>\n        <div class=\"card-body\">\n          <div class=\"chart-area\">\n            <canvas baseChart id=\"outcomesChart\" [datasets]=\"outcomesChartData\" [labels]=\"outcomesChartLabels\" [colors]=\"outcomesChartColors\"\n              [options]=\"outcomesChartOptions\" [chartType]=\"outcomesChartType\" (chartHover)=\"chartHovered($event)\"\n              (chartClick)=\"chartClicked($event)\"></canvas>\n          </div>\n        </div>\n        <div class=\"card-footer\">\n          <div class=\"stats\">\n            <i class=\"now-ui-icons ui-2_chat-round\"></i> Monthly outcomes of farmers in €.\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div class=\"card-header\">\n          <h4 class=\"card-title\">Production per region</h4>\n        </div>\n        <div class=\"map-panel\">\n          <div id=\"map1\" class=\"map\"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div class=\"card-header\">\n          <h4 class=\"card-title\">Farms per Region</h4>\n        </div>\n        <div class=\"map-panel\">\n          <div id=\"map2\" class=\"map\"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -2035,6 +2282,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core_income_stats__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../core/income-stats */ "./src/app/core/income-stats.ts");
 /* harmony import */ var _core_outcome_stats__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../core/outcome-stats */ "./src/app/core/outcome-stats.ts");
 /* harmony import */ var _core_farm_stats__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../core/farm-stats */ "./src/app/core/farm-stats.ts");
+/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! firebase/app */ "./node_modules/firebase/app/dist/index.cjs.js");
+/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(firebase_app__WEBPACK_IMPORTED_MODULE_8__);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2052,6 +2301,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var DashboardComponent = /** @class */ (function () {
     function DashboardComponent(afDb, contentService, http) {
         this.afDb = afDb;
@@ -2061,6 +2311,8 @@ var DashboardComponent = /** @class */ (function () {
         this.incomeStats = new _core_income_stats__WEBPACK_IMPORTED_MODULE_5__["IncomeStats"]();
         this.outcomeStats = new _core_outcome_stats__WEBPACK_IMPORTED_MODULE_6__["OutcomeStats"]();
         this.farmStats = new _core_farm_stats__WEBPACK_IMPORTED_MODULE_7__["FarmStats"]();
+        this.contentService.getFarmStatistics();
+        this.contentService.getIncomeStatistics();
     }
     DashboardComponent.prototype.getJSON = function () {
         return this.http.get('./assets/mapstyle.json');
@@ -2093,7 +2345,7 @@ var DashboardComponent = /** @class */ (function () {
         this.gradientFill.addColorStop(0, 'rgba(128, 182, 244, 0)');
         this.gradientFill.addColorStop(1, 'rgba(255, 255, 255, 0.24)');
         this.lineBigDashboardChartData = [{
-                label: 'Production Litres',
+                label: 'Production Kg',
                 pointBorderWidth: 1,
                 pointHoverRadius: 7,
                 pointHoverBorderWidth: 2,
@@ -2102,20 +2354,19 @@ var DashboardComponent = /** @class */ (function () {
                 borderWidth: 2,
                 data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
             }];
-        var tempYear = '2018';
-        var data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
         this.productionStatsList = this.afDb.list('production-stats');
         this.productionStatsList.snapshotChanges().subscribe(function (item) {
             _this.statsList = [];
             var index = 0;
+            var data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
             item.forEach(function (element) {
                 var y = element.payload.toJSON();
                 y['psid'] = element.key;
                 _this.statsList.push(y);
                 index++;
                 for (var i = 0; i < 12; i++) {
-                    if (y.date === (i + 1) + '/' + tempYear) {
-                        data[i] = data[index] + y.ammount;
+                    if (y.date === (i + 1) + '/' + _this.contentService.tempYear) {
+                        data[i] = data[index] + y.ammountWeight;
                     }
                 }
                 if (index === item.length) {
@@ -2150,19 +2401,18 @@ var DashboardComponent = /** @class */ (function () {
                 data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
             }
         ];
-        var tempYear = '2018';
-        var data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
         this.incomeStatsList = this.afDb.list('income-stats');
         this.incomeStatsList.snapshotChanges().subscribe(function (item) {
             _this.inStatsList = [];
             var index = 0;
+            var data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
             item.forEach(function (element) {
                 var y = element.payload.toJSON();
                 y['isid'] = element.key;
                 _this.inStatsList.push(y);
                 index++;
                 for (var i = 0; i < 12; i++) {
-                    if (y.date === (i + 1) + '/' + tempYear) {
+                    if (y.date === (i + 1) + '/' + _this.contentService.tempYear) {
                         data[i] = data[index] + y.ammount;
                     }
                 }
@@ -2195,19 +2445,18 @@ var DashboardComponent = /** @class */ (function () {
                 data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
             }
         ];
-        var tempYear = '2018';
-        var data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
         this.outcomeStatsList = this.afDb.list('outcome-stats');
         this.outcomeStatsList.snapshotChanges().subscribe(function (item) {
             _this.outStatsList = [];
             var index = 0;
+            var data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
             item.forEach(function (element) {
                 var y = element.payload.toJSON();
                 y['osid'] = element.key;
                 _this.outStatsList.push(y);
                 index++;
                 for (var i = 0; i < 12; i++) {
-                    if (y.date === (i + 1) + '/' + tempYear) {
+                    if (y.date === (i + 1) + '/' + _this.contentService.tempYear) {
                         data[i] = data[index] + y.ammount;
                     }
                 }
@@ -2229,12 +2478,11 @@ var DashboardComponent = /** @class */ (function () {
                 data: [0, 0, 0, 0]
             }
         ];
-        this.farmsChartLabels = ['Her.', 'Reth.', 'Ch.', 'Las.'];
-        var tempYear = '2018';
-        var data = [0, 0, 0, 0];
+        this.farmsChartLabels = ['Her.', 'Ch.', 'Reth.', 'Las.'];
         this.farmStatsList = this.contentService.getfarmStats();
         this.farmStatsList.snapshotChanges().subscribe(function (item) {
             _this.farmsChartData = [];
+            var data = [0, 0, 0, 0];
             if (item.length !== 0) {
                 item.forEach(function (element) {
                     var y = element.payload.toJSON();
@@ -2260,29 +2508,66 @@ var DashboardComponent = /** @class */ (function () {
         });
         this.farmsChartType = 'pie';
     };
-    DashboardComponent.prototype.refreshFarms = function () {
-        this.contentService.refreshFarmStats();
-    };
-    DashboardComponent.prototype.refreshProduction = function () {
-        this.contentService.refreshProductionStats();
-    };
-    DashboardComponent.prototype.refreshIncomes = function () {
-        this.contentService.refreshIncomeStats();
-    };
-    DashboardComponent.prototype.refreshOutcomes = function () {
-        this.contentService.refreshOutcomeStats();
-    };
     DashboardComponent.prototype.getFarmsData = function () {
         var _this = this;
+        var gradient1 = [
+            'rgba(255, 140, 0, 0)',
+            'rgba(255, 140, 0, 1)',
+            'rgba(255, 140, 0, 1)',
+            'rgba(255, 140, 0, 1)',
+            'rgba(255, 140, 0, 1)',
+            'rgba(255, 140, 0, 1)',
+            'rgba(255, 140, 0, 1)',
+            'rgba(255, 140, 0, 1)',
+            'rgba(255, 140, 0, 1)',
+            'rgba(255, 140, 0, 1)',
+            'rgba(255, 140, 0, 1)',
+            'rgba(255, 140, 0, 1)',
+            'rgba(255, 140, 0, 1)',
+            'rgba(255, 140, 0, 1)'
+        ];
+        var gradient2 = [
+            'rgba(255,54,54, 0)',
+            'rgba(255,54,54, 1)',
+            'rgba(255,54,54, 1)',
+            'rgba(255,54,54, 1)',
+            'rgba(255,54,54, 1)',
+            'rgba(255,54,54, 1)',
+            'rgba(255,54,54, 1)',
+            'rgba(255,54,54, 1)',
+            'rgba(255,54,54, 1)',
+            'rgba(255,54,54, 1)',
+            'rgba(255,54,54, 1)',
+            'rgba(255,54,54, 1)',
+            'rgba(255,54,54, 1)',
+            'rgba(255,54,54, 1)'
+        ];
         this.contentService.getFarmsData().snapshotChanges().subscribe(function (item) {
             item.forEach(function (element) {
                 var y = element.payload.toJSON();
-                var heatmapData = [];
+                var heatmapData1 = [];
+                var heatmapData2 = [];
                 y['fid'] = element.key;
-                heatmapData.push(new google.maps.LatLng(y.latitude, y.longitude));
-                var heatmap = new google.maps.visualization.HeatmapLayer({
-                    data: heatmapData,
+                firebase_app__WEBPACK_IMPORTED_MODULE_8__["database"]().ref('production').orderByChild('farmid').equalTo(y.fid).once('value', function (item2) {
+                    item2.forEach(function (element2) {
+                        var p = element2.toJSON();
+                        p['pid'] = element2.key;
+                        heatmapData1.push(new google.maps.LatLng(y.latitude, y.longitude));
+                        var heatmap1 = new google.maps.visualization.HeatmapLayer({
+                            data: heatmapData1,
+                            dissipating: true,
+                            radius: 20,
+                            gradient: gradient1,
+                            map: _this.map1
+                        });
+                    });
+                });
+                heatmapData2.push(new google.maps.LatLng(y.latitude, y.longitude));
+                var heatmap2 = new google.maps.visualization.HeatmapLayer({
+                    data: heatmapData2,
                     dissipating: true,
+                    radius: 20,
+                    gradient: gradient2,
                     map: _this.map2
                 });
             });
@@ -2304,14 +2589,18 @@ var DashboardComponent = /** @class */ (function () {
         this.map1 = new google.maps.Map(document.getElementById('map1'), {
             zoom: 8,
             center: new google.maps.LatLng(35.3900078, 25.0834658),
-            scrollwheel: false
+            scrollwheel: false,
+            mapTypeControl: false,
+            streetViewControl: false
         });
     };
     DashboardComponent.prototype.initMap2 = function () {
         this.map2 = new google.maps.Map(document.getElementById('map2'), {
             zoom: 8,
             center: new google.maps.LatLng(35.3900078, 25.0834658),
-            scrollwheel: false
+            scrollwheel: false,
+            mapTypeControl: false,
+            streetViewControl: false
         });
     };
     DashboardComponent.prototype.initializeMainChartStyle = function () {
@@ -2561,7 +2850,6 @@ var AdminLayoutComponent = /** @class */ (function () {
         var _this = this;
         var isWindows = navigator.platform.indexOf('Win') > -1 ? true : false;
         if (isWindows && !document.getElementsByTagName('body')[0].classList.contains('sidebar-mini')) {
-            // if we are on windows OS we activate the perfectScrollbar function
             document.getElementsByTagName('body')[0].classList.add('perfect-scrollbar-on');
         }
         else {
@@ -2630,7 +2918,8 @@ var AdminLayoutComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./admin-layout.component.html */ "./src/app/layouts/admin-layout/admin-layout.component.html"),
             styles: [__webpack_require__(/*! ./admin-layout.component.css */ "./src/app/layouts/admin-layout/admin-layout.component.css")]
         }),
-        __metadata("design:paramtypes", [_angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
+        __metadata("design:paramtypes", [_angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
     ], AdminLayoutComponent);
     return AdminLayoutComponent;
 }());
@@ -2769,7 +3058,8 @@ var ConsultantLayoutComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./consultant-layout.component.html */ "./src/app/layouts/consultant-layout/consultant-layout.component.html"),
             styles: [__webpack_require__(/*! ./consultant-layout.component.css */ "./src/app/layouts/consultant-layout/consultant-layout.component.css")]
         }),
-        __metadata("design:paramtypes", [_angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
+        __metadata("design:paramtypes", [_angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
     ], ConsultantLayoutComponent);
     return ConsultantLayoutComponent;
 }());
@@ -2839,7 +3129,6 @@ var FarmerLayoutComponent = /** @class */ (function () {
         var _this = this;
         var isWindows = navigator.platform.indexOf('Win') > -1 ? true : false;
         if (isWindows && !document.getElementsByTagName('body')[0].classList.contains('sidebar-mini')) {
-            // if we are on windows OS we activate the perfectScrollbar function
             document.getElementsByTagName('body')[0].classList.add('perfect-scrollbar-on');
         }
         else {
@@ -2908,7 +3197,8 @@ var FarmerLayoutComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./farmer-layout.component.html */ "./src/app/layouts/farmer-layout/farmer-layout.component.html"),
             styles: [__webpack_require__(/*! ./farmer-layout.component.css */ "./src/app/layouts/farmer-layout/farmer-layout.component.css")]
         }),
-        __metadata("design:paramtypes", [_angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
+        __metadata("design:paramtypes", [_angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
     ], FarmerLayoutComponent);
     return FarmerLayoutComponent;
 }());
@@ -2935,7 +3225,7 @@ module.exports = ".login-card{\r\n    margin-top: 9em;\r\n    padding: 2em;\r\n}
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n    <div class=\"row justify-content-md-center\">\r\n        <div class=\"col-lg-6 col-md-8\">\r\n            <div class=\"card login-card\">\r\n                <div class=\"header\">\r\n                    <h4>Login</h4>\r\n                </div>\r\n                <div class=\"content\">\r\n                    <form [formGroup]=\"loginForm\">\r\n                        <div class=\"row\">\r\n                            <div class=\"col-md-12\">\r\n                                <div class=\"form-group\">\r\n                                    <label>Username</label>\r\n                                    <input id=\"email\" type=\"email\" formControlName=\"email\" class=\"form-control\"\r\n                                        placeholder=\"Username\">\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"row\">\r\n                            <div class=\"col-md-12\">\r\n                                <div class=\"form-group\">\r\n                                    <label>Password</label>\r\n                                    <input id=\"password\" type=\"password\" formControlName=\"password\" class=\"form-control\"\r\n                                        placeholder=\"Password\">\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                        <p>{{errorMessage}}</p>\r\n                        <br>\r\n                        <div class=\"text-center\">\r\n                            <button type=\"submit\" (click)=\"tryLogin(loginForm.value)\" class=\"btn btn-primary btn-block\">Login</button>\r\n                        </div>\r\n                        <div class=\"clearfix\"></div>\r\n                        <div class=\"row\">\r\n                            <div class=\"col-lg-8\">\r\n                                <p>You don't have an account?\r\n                                    <a routerLink=\"/register\">Register.</a>\r\n                                </p>\r\n                            </div>\r\n                        </div>\r\n                    </form>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"container\">\r\n    <div class=\"row justify-content-md-center\">\r\n        <div class=\"col-lg-6 col-md-8\">\r\n            <div class=\"card login-card\">\r\n                <div class=\"header\">\r\n                    <h4>Login</h4>\r\n                </div>\r\n                <div class=\"content\">\r\n                    <form [formGroup]=\"loginForm\">\r\n                        <div class=\"row\">\r\n                            <div class=\"col-md-12\">\r\n                                <div class=\"form-group\">\r\n                                    <label>Username</label>\r\n                                    <input id=\"email\" type=\"email\" formControlName=\"email\" class=\"form-control\"\r\n                                        placeholder=\"Username\">\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"row\">\r\n                            <div class=\"col-md-12\">\r\n                                <div class=\"form-group\">\r\n                                    <label>Password</label>\r\n                                    <input id=\"password\" type=\"password\" formControlName=\"password\" class=\"form-control\"\r\n                                        placeholder=\"Password\">\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                        <small class=\"text-danger\">{{errorMessage}}</small>\r\n                        <br>\r\n                        <div class=\"text-center\">\r\n                            <button type=\"submit\" (click)=\"tryLogin(loginForm.value)\" class=\"btn btn-primary btn-block\">Login</button>\r\n                        </div>\r\n                        <div class=\"clearfix\"></div>\r\n                        <div class=\"row\">\r\n                            <div class=\"col-lg-8\">\r\n                                <p>You don't have an account?\r\n                                    <a routerLink=\"/register\">Register.</a>\r\n                                </p>\r\n                            </div>\r\n                        </div>\r\n                    </form>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -2971,11 +3261,11 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var LoginComponent = /** @class */ (function () {
-    function LoginComponent(afDb, authService, router, fb) {
+    function LoginComponent(afDb, authService, router, formBuilder) {
         this.afDb = afDb;
         this.authService = authService;
         this.router = router;
-        this.fb = fb;
+        this.formBuilder = formBuilder;
         this.errorMessage = '';
         this.user = new _core_user__WEBPACK_IMPORTED_MODULE_4__["User"];
         this.createForm();
@@ -2983,19 +3273,20 @@ var LoginComponent = /** @class */ (function () {
     LoginComponent.prototype.ngOnInit = function () {
     };
     LoginComponent.prototype.createForm = function () {
-        this.loginForm = this.fb.group({
+        this.loginForm = this.formBuilder.group({
             email: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
             password: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]
         });
     };
-    LoginComponent.prototype.tryLogin = function (value) {
+    LoginComponent.prototype.tryLogin = function (formValues) {
         var _this = this;
-        this.authService.doLogin(value)
-            .then(function (res) {
+        this.authService.doLogin(formValues)
+            .then(function (result) {
+            console.log(result);
             _this.retriveData();
-        }, function (err) {
-            console.log(err);
-            _this.errorMessage = err.message;
+        }, function (error) {
+            console.log(error);
+            _this.errorMessage = '*' + error.message;
         });
     };
     LoginComponent.prototype.retriveData = function () {
@@ -3007,7 +3298,7 @@ var LoginComponent = /** @class */ (function () {
             if (_this.user.role === 'administrator' || _this.user.role === 'consultant') {
                 _this.router.navigate(['/dashboard']);
             }
-            if (_this.user.role === 'farmer') {
+            else if (_this.user.role === 'farmer') {
                 _this.router.navigate(['/farmer-dashboard']);
             }
         });
@@ -3037,7 +3328,7 @@ var LoginComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".register-card{\r\n    margin-top: 5em;\r\n    padding: 2em;\r\n}\r\n\r\n.role-c{\r\n    margin-left: 1em;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcmVnaXN0ZXIvcmVnaXN0ZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGdCQUFnQjtJQUNoQixhQUFhO0NBQ2hCOztBQUVEO0lBQ0ksaUJBQWlCO0NBQ3BCIiwiZmlsZSI6InNyYy9hcHAvcmVnaXN0ZXIvcmVnaXN0ZXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5yZWdpc3Rlci1jYXJke1xyXG4gICAgbWFyZ2luLXRvcDogNWVtO1xyXG4gICAgcGFkZGluZzogMmVtO1xyXG59XHJcblxyXG4ucm9sZS1je1xyXG4gICAgbWFyZ2luLWxlZnQ6IDFlbTtcclxufSJdfQ== */"
+module.exports = ".register-card{\r\n    margin-top: 3em;\r\n    padding: 2em;\r\n}\r\n.role-c{\r\n    margin-left: 1em;\r\n}\r\n.role-header{\r\n    margin-top: 15px !important;\r\n}\r\n.terms-row{\r\n    padding-top: 1em !important;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcmVnaXN0ZXIvcmVnaXN0ZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGdCQUFnQjtJQUNoQixhQUFhO0NBQ2hCO0FBQ0Q7SUFDSSxpQkFBaUI7Q0FDcEI7QUFDRDtJQUNJLDRCQUE0QjtDQUMvQjtBQUNEO0lBQ0ksNEJBQTRCO0NBQy9CIiwiZmlsZSI6InNyYy9hcHAvcmVnaXN0ZXIvcmVnaXN0ZXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5yZWdpc3Rlci1jYXJke1xyXG4gICAgbWFyZ2luLXRvcDogM2VtO1xyXG4gICAgcGFkZGluZzogMmVtO1xyXG59XHJcbi5yb2xlLWN7XHJcbiAgICBtYXJnaW4tbGVmdDogMWVtO1xyXG59XHJcbi5yb2xlLWhlYWRlcntcclxuICAgIG1hcmdpbi10b3A6IDE1cHggIWltcG9ydGFudDtcclxufVxyXG4udGVybXMtcm93e1xyXG4gICAgcGFkZGluZy10b3A6IDFlbSAhaW1wb3J0YW50O1xyXG59Il19 */"
 
 /***/ }),
 
@@ -3048,7 +3339,7 @@ module.exports = ".register-card{\r\n    margin-top: 5em;\r\n    padding: 2em;\r
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n    <div class=\"row justify-content-md-center\">\r\n        <div class=\"col-lg-6 col-md-8\">\r\n            <div class=\"card register-card\">\r\n                <div class=\"header\">\r\n                    <h4>Register</h4>\r\n                </div>\r\n                <div class=\"content\">\r\n                    <form [formGroup]=\"registerForm\">\r\n                        <div class=\"row\">\r\n                            <div class=\"col-md-12\">\r\n                                <div class=\"form-group\">\r\n                                    <label>Username</label>\r\n                                    <input id=\"email\" type=\"email\" formControlName=\"email\" class=\"form-control\"\r\n                                        placeholder=\"Username\">\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"row\">\r\n                            <div class=\"col-md-12\">\r\n                                <div class=\"form-group\">\r\n                                    <label>Password</label>\r\n                                    <input id=\"password\" type=\"password\" formControlName=\"password\" class=\"form-control\"\r\n                                        placeholder=\"Password\">\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"row\">\r\n                            <div class=\"col-md-12\">\r\n                                <div class=\"form-group\">\r\n                                    <h4>Role</h4>\r\n                                    <label class=\"radio-inline role-f\"><input type=\"radio\" formControlName=\"role\" value=\"farmer\"\r\n                                            class=\"form-control\">Farmer</label>\r\n                                    <label class=\"radio-inline role-c\"><input type=\"radio\" formControlName=\"role\" value=\"consultant\"\r\n                                            class=\"form-control\">Consultant</label>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                        <p *ngIf=\"errorMessage!==''\">{{errorMessage}}</p>\r\n                        <p *ngIf=\"successMessage!==''\">{{successMessage}}</p>\r\n                        <br>\r\n                        <div class=\"text-center\">\r\n                            <button type=\"submit\" (click)=\"tryRegister(registerForm.value)\" class=\"btn btn-primary btn-block\">Register</button>\r\n                        </div>\r\n                        <div class=\"clearfix\"></div>\r\n                        <div class=\"row\">\r\n                            <div class=\"col-lg-8\">\r\n                                <p>Already have an account?\r\n                                    <a routerLink=\"/login\">Login.</a>\r\n                                </p>\r\n                            </div>\r\n                        </div>\r\n                    </form>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"container\">\r\n    <div class=\"row justify-content-md-center\">\r\n        <div class=\"col-lg-6 col-md-8\">\r\n            <div class=\"card register-card\">\r\n                <div class=\"header\">\r\n                    <h4>Register</h4>\r\n                </div>\r\n                <div class=\"content\">\r\n                    <form [formGroup]=\"registerForm\">\r\n                        <div class=\"row\">\r\n                            <div class=\"col-md-12\">\r\n                                <div class=\"form-group\">\r\n                                    <label>Username</label>\r\n                                    <input id=\"email\" type=\"email\" formControlName=\"email\" class=\"form-control\"\r\n                                        placeholder=\"Username\">\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"row\">\r\n                            <div class=\"col-md-12\">\r\n                                <div class=\"form-group\">\r\n                                    <label>Password</label>\r\n                                    <input id=\"password\" type=\"password\" formControlName=\"password\" class=\"form-control\"\r\n                                        placeholder=\"Password\">\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"row\">\r\n                            <div class=\"col-md-12\">\r\n                                <div class=\"form-group\">\r\n                                    <h4 class=\"role-header\">Role</h4>\r\n                                    <label class=\"radio-inline role-f\"><input type=\"radio\" formControlName=\"role\" value=\"farmer\"\r\n                                            class=\"form-control\">Farmer</label>\r\n                                    <label class=\"radio-inline role-c\"><input type=\"radio\" formControlName=\"role\" value=\"consultant\"\r\n                                            class=\"form-control\">Consultant</label>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"row terms-row\">\r\n                            <div class=\"col-md-8\">\r\n                                <div class=\"form-group\">\r\n                                    <div class=\"checkbox\">\r\n                                        <label><input type=\"checkbox\" formControlName=\"terms\" value=\"terms\"> I agree to\r\n                                            the <a routerLink=\"/terms-of-use\">Terms\r\n                                                of Use\r\n                                                and Privacy Policy</a>.</label>\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                        <small class=\"text-danger\" *ngIf=\"errorMessage!==''\">{{errorMessage}}</small>\r\n                        <small class=\"text-success\" *ngIf=\"successMessage!==''\">{{successMessage}}</small>\r\n                        <br>\r\n                        <div class=\"text-center\">\r\n                            <button type=\"submit\" (click)=\"tryRegister(registerForm.value)\" class=\"btn btn-primary btn-block\">Register</button>\r\n                        </div>\r\n                        <div class=\"clearfix\"></div>\r\n                        <div class=\"row\">\r\n                            <div class=\"col-lg-8\">\r\n                                <p>Already have an account?\r\n                                    <a routerLink=\"/login\">Login.</a>\r\n                                </p>\r\n                            </div>\r\n                        </div>\r\n                    </form>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -3064,8 +3355,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegisterComponent", function() { return RegisterComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _core_auth_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/auth.service */ "./src/app/core/auth.service.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3078,34 +3368,39 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
 var RegisterComponent = /** @class */ (function () {
-    function RegisterComponent(authService, router, fb) {
+    function RegisterComponent(authService, formBuilder) {
         this.authService = authService;
-        this.router = router;
-        this.fb = fb;
+        this.formBuilder = formBuilder;
         this.createForm();
     }
     RegisterComponent.prototype.ngOnInit = function () { };
     RegisterComponent.prototype.createForm = function () {
-        this.registerForm = this.fb.group({
-            email: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
-            password: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
-            role: ['farmer', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]
+        this.registerForm = this.formBuilder.group({
+            email: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            password: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            role: ['farmer', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            terms: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
         });
     };
-    RegisterComponent.prototype.tryRegister = function (value) {
+    RegisterComponent.prototype.tryRegister = function (formValues) {
         var _this = this;
-        this.authService.doRegister(value)
-            .then(function (res) {
-            console.log(res);
-            _this.errorMessage = '';
-            _this.successMessage = 'Your account has been created.';
-        }, function (err) {
-            console.log(err);
-            _this.errorMessage = err.message;
-            _this.successMessage = '';
-        });
+        if (formValues.terms) {
+            this.authService.doRegister(formValues)
+                .then(function (result) {
+                console.log(result);
+                _this.errorMessage = '';
+                _this.successMessage = 'Your account has been created.';
+            }, function (error) {
+                console.log(error);
+                _this.errorMessage = '*' + error.message;
+                _this.successMessage = '';
+            });
+        }
+        else {
+            this.errorMessage = '*You should agree to the Terms of Use and Privacy Policy.';
+            this.successMessage = '';
+        }
     };
     RegisterComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -3114,10 +3409,77 @@ var RegisterComponent = /** @class */ (function () {
             styles: [__webpack_require__(/*! ./register.component.css */ "./src/app/register/register.component.css")]
         }),
         __metadata("design:paramtypes", [_core_auth_service__WEBPACK_IMPORTED_MODULE_1__["AuthService"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
-            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]])
+            _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]])
     ], RegisterComponent);
     return RegisterComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/terms-of-use/terms-of-use.component.css":
+/*!*********************************************************!*\
+  !*** ./src/app/terms-of-use/terms-of-use.component.css ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".terms-card{\r\n    margin-top: 2em;\r\n    margin-bottom: 2em;\r\n    padding: 2em;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGVybXMtb2YtdXNlL3Rlcm1zLW9mLXVzZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksZ0JBQWdCO0lBQ2hCLG1CQUFtQjtJQUNuQixhQUFhO0NBQ2hCIiwiZmlsZSI6InNyYy9hcHAvdGVybXMtb2YtdXNlL3Rlcm1zLW9mLXVzZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnRlcm1zLWNhcmR7XHJcbiAgICBtYXJnaW4tdG9wOiAyZW07XHJcbiAgICBtYXJnaW4tYm90dG9tOiAyZW07XHJcbiAgICBwYWRkaW5nOiAyZW07XHJcbn0iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/terms-of-use/terms-of-use.component.html":
+/*!**********************************************************!*\
+  !*** ./src/app/terms-of-use/terms-of-use.component.html ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n  <div class=\"row justify-content-md-center\">\n    <div class=\"col-lg-8 col-md-8\">\n      <div class=\"card terms-card\">\n        <div class=\"header\">\n          <h4 class=\"dd\">Terms and Conditions</h4>\n        </div>\n        <div class=\"content\">\n          <small>\n            <br>\n            <b>Terms</b>\n            <br>\n            Please read these Terms and Conditions (\"Terms\", \"Terms and Conditions\") carefully before using\n            the website and the My Mobile App (change this) mobile\n            application (the \"Service\") operated by My Company (change this) (\"us\", \"we\", or \"our\").\n            Your access to and use of the Service is conditioned on your acceptance of and compliance with\n            these Terms. These Terms apply to all visitors, users and others who access or use the Service.\n            By accessing or using the Service you agree to be bound by these Terms. If you disagree\n            with any part of the terms then you may not access the Service.\n            <br>\n            <b>Purchases</b>\n            <br>\n            If you wish to purchase any product or service made available through the Service (\"Purchase\"),\n            you may be asked to supply certain information relevant to your Purchase including, without\n            limitation, your …\n            The Purchases section is for businesses that sell online (physical or digital). For the full\n            disclosure section, create your own Terms and Conditions.\n            <br>\n            <b>Subscriptions</b>\n            <br>\n            Some parts of the Service are billed on a subscription basis (\"Subscription(s)\"). You will be billed in\n            advance on a recurring ...\n            The Subscriptions section is for SaaS businesses. For the full disclosure section, create your\n            own Terms and Conditions.\n            <br>\n            <b>Content</b>\n            <br>\n            Our Service allows you to post, link, store, share and otherwise make available certain information,\n            text, graphics, videos, or other material (\"Content\"). You are responsible for the …\n            The Content section is for businesses that allow users to create, edit, share, make content on\n            their websites or apps. For the full disclosure section, create your own Terms and Conditions.\n            <br>\n            <b>Links To Other Web Sites</b>\n            <br>\n            Our Service may contain links to third-party web sites or services that are not owned or controlled\n            by My Company (change this).\n            My Company (change this) has no control over, and assumes no responsibility for, the content,\n            privacy policies, or practices of any third party web sites or services. You further acknowledge and\n            agree that My Company (change this) shall not be responsible or liable, directly or indirectly, for any\n            damage or loss caused or alleged to be caused by or in connection with use of or reliance on any\n            such content, goods or services available on or through any such web sites or services.\n            <br>\n            <b>Changes</b>\n            <br>\n            We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a\n            revision is material we will try to provide at least 30 (change this) days' notice prior to any new terms\n            taking effect. What constitutes a material change will be determined at our sole discretion.\n            <br>\n            <b>Contact Us</b>\n            <br>\n            If you have any questions about these Terms, please contact us.</small>\n          <button type=\"button\" (click)=\"goBack()\" class=\"btn btn-primary btn-block\">Back</button>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/terms-of-use/terms-of-use.component.ts":
+/*!********************************************************!*\
+  !*** ./src/app/terms-of-use/terms-of-use.component.ts ***!
+  \********************************************************/
+/*! exports provided: TermsOfUseComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TermsOfUseComponent", function() { return TermsOfUseComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var TermsOfUseComponent = /** @class */ (function () {
+    function TermsOfUseComponent(location) {
+        this.location = location;
+    }
+    TermsOfUseComponent.prototype.ngOnInit = function () { };
+    TermsOfUseComponent.prototype.goBack = function () {
+        this.location.back();
+    };
+    TermsOfUseComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-terms-of-use',
+            template: __webpack_require__(/*! ./terms-of-use.component.html */ "./src/app/terms-of-use/terms-of-use.component.html"),
+            styles: [__webpack_require__(/*! ./terms-of-use.component.css */ "./src/app/terms-of-use/terms-of-use.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_common__WEBPACK_IMPORTED_MODULE_1__["Location"]])
+    ], TermsOfUseComponent);
+    return TermsOfUseComponent;
 }());
 
 
@@ -3142,7 +3504,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div class=\"card-header\">\n          <h4 class=\"card-title\"> Total Farms</h4>\n        </div>\n        <div class=\"card-body\">\n          <div class=\"table-responsive-sm\">\n            <table class=\"table\">\n              <thead class=\"text-primary\">\n                <tr>\n                  <th *ngFor=\"let cell of tableData.headerRow\">{{cell}}</th>\n                </tr>\n              </thead>\n              <tbody>\n                <tr *ngFor=\"let row of farmsList; let i = index;\">\n                  <td>{{i+1}}</td>\n                  <td>{{row.farmerid}}</td>\n                  <td>{{row.title}}</td>\n                  <td>{{row.region}}</td>\n                  <td>{{row.size | number}} m<sup>2</sup></td>\n                  <td>{{row.soil}}</td>\n                  <td>{{row.description}}</td>\n                </tr>\n              </tbody>\n            </table>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div class=\"card-header\">\n          <h4 class=\"card-title\"> Total Farms</h4>\n          <!-- <p class=\"category\"> Here is a subtitle for this table</p> -->\n        </div>\n        <div class=\"card-body\">\n          <div class=\"table-responsive-sm\">\n            <table class=\"table\">\n              <thead class=\"text-primary\">\n                <th *ngFor=\"let cell of tableData.headerRow\">{{cell}}</th>\n              </thead>\n              <tbody>\n                <tr *ngFor=\"let row of farmsList; let i = index;\">\n                  <td>{{i+1}}</td>\n                  <td>{{row.farmerid}}</td>\n                  <td>{{row.title}}</td>\n                  <td>{{row.region}}</td>\n                  <td>{{row.size | number}} m<sup>2</sup></td>\n                  <td>{{row.soil}}</td>\n                  <td>{{row.description}}</td>\n                </tr>\n              </tbody>\n            </table>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -3157,8 +3519,7 @@ module.exports = "<div class=\"panel-header panel-header-sm\">\n</div>\n<div cla
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TotalFarmsComponent", function() { return TotalFarmsComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _core_content_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/content.service */ "./src/app/core/content.service.ts");
+/* harmony import */ var _core_content_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/content.service */ "./src/app/core/content.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3170,10 +3531,8 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
-
 var TotalFarmsComponent = /** @class */ (function () {
-    function TotalFarmsComponent(router, contentService) {
-        this.router = router;
+    function TotalFarmsComponent(contentService) {
         this.contentService = contentService;
     }
     TotalFarmsComponent.prototype.ngOnInit = function () {
@@ -3181,8 +3540,7 @@ var TotalFarmsComponent = /** @class */ (function () {
         this.tableData = {
             headerRow: ['ID', 'Farmer ID', 'Title', 'Region', 'Size', 'Soil', 'Description']
         };
-        var x = this.contentService.getFarmsData();
-        x.snapshotChanges().subscribe(function (item) {
+        this.contentService.getFarmsData().snapshotChanges().subscribe(function (item) {
             _this.farmsList = [];
             item.forEach(function (element) {
                 var y = element.payload.toJSON();
@@ -3197,8 +3555,7 @@ var TotalFarmsComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./total-farms.component.html */ "./src/app/total-farms/total-farms.component.html"),
             styles: [__webpack_require__(/*! ./total-farms.component.css */ "./src/app/total-farms/total-farms.component.css")]
         }),
-        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
-            _core_content_service__WEBPACK_IMPORTED_MODULE_2__["ContentService"]])
+        __metadata("design:paramtypes", [_core_content_service__WEBPACK_IMPORTED_MODULE_1__["ContentService"]])
     ], TotalFarmsComponent);
     return TotalFarmsComponent;
 }());
@@ -3225,7 +3582,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div class=\"card-header\">\n          <h4 class=\"card-title\"> Total Incomes</h4>\n        </div>\n        <div class=\"card-body\">\n          <div class=\"table-responsive-sm\">\n            <table class=\"table\">\n              <thead class=\"text-primary\">\n                <tr>\n                  <th *ngFor=\"let cell of tableData.headerRow\">{{cell}}</th>\n                </tr>\n              </thead>\n              <tbody>\n                <tr *ngFor=\"let row of incomesList; let i = index;\">\n                  <td>{{i+1}}</td>\n                  <td>{{row.farmerid}}</td>\n                  <td>{{row.title}}</td>\n                  <td>{{row.ammount | number}} €</td>\n                  <td>{{row.description}}</td>\n                </tr>\n              </tbody>\n            </table>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div class=\"card-header\">\n          <h4 class=\"card-title\"> Total Incomes</h4>\n        </div>\n        <div class=\"card-body\">\n          <div class=\"table-responsive-sm\">\n            <table class=\"table\">\n              <thead class=\"text-primary\">\n                <th *ngFor=\"let cell of tableData.headerRow\">{{cell}}</th>\n              </thead>\n              <tbody>\n                <tr *ngFor=\"let row of incomesList; let i = index;\">\n                  <td>{{i+1}}</td>\n                  <td>{{row.farmerid}}</td>\n                  <td>{{row.title}}</td>\n                  <td>{{row.ammount | number}} €</td>\n                  <td>{{row.registrationDate | date}}</td>\n                  <td>{{row.description}}</td>\n                </tr>\n              </tbody>\n            </table>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -3240,8 +3597,7 @@ module.exports = "<div class=\"panel-header panel-header-sm\">\n</div>\n<div cla
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TotalIncomesComponent", function() { return TotalIncomesComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _core_content_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/content.service */ "./src/app/core/content.service.ts");
+/* harmony import */ var _core_content_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/content.service */ "./src/app/core/content.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3253,19 +3609,16 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
-
 var TotalIncomesComponent = /** @class */ (function () {
-    function TotalIncomesComponent(router, contentService) {
-        this.router = router;
+    function TotalIncomesComponent(contentService) {
         this.contentService = contentService;
     }
     TotalIncomesComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.tableData = {
-            headerRow: ['ID', 'Farmer ID', 'Title', 'Ammount', 'Description']
+            headerRow: ['ID', 'Farmer ID', 'Title', 'Ammount', 'Date', 'Description']
         };
-        var x = this.contentService.getIncomesData();
-        x.snapshotChanges().subscribe(function (item) {
+        this.contentService.getIncomesData().snapshotChanges().subscribe(function (item) {
             _this.incomesList = [];
             item.forEach(function (element) {
                 var y = element.payload.toJSON();
@@ -3280,8 +3633,7 @@ var TotalIncomesComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./total-incomes.component.html */ "./src/app/total-incomes/total-incomes.component.html"),
             styles: [__webpack_require__(/*! ./total-incomes.component.css */ "./src/app/total-incomes/total-incomes.component.css")]
         }),
-        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
-            _core_content_service__WEBPACK_IMPORTED_MODULE_2__["ContentService"]])
+        __metadata("design:paramtypes", [_core_content_service__WEBPACK_IMPORTED_MODULE_1__["ContentService"]])
     ], TotalIncomesComponent);
     return TotalIncomesComponent;
 }());
@@ -3308,7 +3660,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div class=\"card-header\">\n          <h4 class=\"card-title\"> Total Outcomes</h4>\n        </div>\n        <div class=\"card-body\">\n          <div class=\"table-responsive-sm\">\n            <table class=\"table\">\n              <thead class=\"text-primary\">\n                <tr>\n                  <th *ngFor=\"let cell of tableData.headerRow\">{{cell}}</th>\n                </tr>\n              </thead>\n              <tbody>\n                <tr *ngFor=\"let row of outcomesList; let i = index;\">\n                  <td>{{i+1}}</td>\n                  <td>{{row.farmerid}}</td>\n                  <td>{{row.title}}</td>\n                  <td>{{row.ammount | number}} €</td>\n                  <td>{{row.description}}</td>\n                </tr>\n              </tbody>\n            </table>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div class=\"card-header\">\n          <h4 class=\"card-title\"> Total Outcomes</h4>\n        </div>\n        <div class=\"card-body\">\n          <div class=\"table-responsive-sm\">\n            <table class=\"table\">\n              <thead class=\"text-primary\">\n                <th *ngFor=\"let cell of tableData.headerRow\">{{cell}}</th>\n              </thead>\n              <tbody>\n                <tr *ngFor=\"let row of outcomesList; let i = index;\">\n                  <td>{{i+1}}</td>\n                  <td>{{row.farmerid}}</td>\n                  <td>{{row.title}}</td>\n                  <td>{{row.ammount | number}} €</td>\n                  <td>{{row.registrationDate | date}}</td>\n                  <td>{{row.description}}</td>\n                </tr>\n              </tbody>\n            </table>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -3323,8 +3675,7 @@ module.exports = "<div class=\"panel-header panel-header-sm\">\n</div>\n<div cla
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TotalOutcomesComponent", function() { return TotalOutcomesComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _core_content_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/content.service */ "./src/app/core/content.service.ts");
+/* harmony import */ var _core_content_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/content.service */ "./src/app/core/content.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3336,19 +3687,16 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
-
 var TotalOutcomesComponent = /** @class */ (function () {
-    function TotalOutcomesComponent(router, contentService) {
-        this.router = router;
+    function TotalOutcomesComponent(contentService) {
         this.contentService = contentService;
     }
     TotalOutcomesComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.tableData = {
-            headerRow: ['ID', 'Farmer ID', 'Title', 'Ammount', 'Description']
+            headerRow: ['ID', 'Farmer ID', 'Title', 'Ammount', 'Date', 'Description']
         };
-        var x = this.contentService.getOutcomesData();
-        x.snapshotChanges().subscribe(function (item) {
+        this.contentService.getOutcomesData().snapshotChanges().subscribe(function (item) {
             _this.outcomesList = [];
             item.forEach(function (element) {
                 var y = element.payload.toJSON();
@@ -3363,8 +3711,7 @@ var TotalOutcomesComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./total-outcomes.component.html */ "./src/app/total-outcomes/total-outcomes.component.html"),
             styles: [__webpack_require__(/*! ./total-outcomes.component.css */ "./src/app/total-outcomes/total-outcomes.component.css")]
         }),
-        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
-            _core_content_service__WEBPACK_IMPORTED_MODULE_2__["ContentService"]])
+        __metadata("design:paramtypes", [_core_content_service__WEBPACK_IMPORTED_MODULE_1__["ContentService"]])
     ], TotalOutcomesComponent);
     return TotalOutcomesComponent;
 }());
@@ -3391,7 +3738,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div class=\"card-header\">\n          <h4 class=\"card-title\"> Total Production</h4>\n        </div>\n        <div class=\"card-body\">\n          <div class=\"table-responsive-sm\">\n            <table class=\"table\">\n              <thead class=\"text-primary\">\n                <tr>\n                  <th *ngFor=\"let cell of tableData.headerRow\">{{cell}}</th>\n                </tr>\n              </thead>\n              <tbody>\n                <tr *ngFor=\"let row of productionList; let i = index;\">\n                  <td>{{i+1}}</td>\n                  <td>{{row.farmerid}}</td>\n                  <td>{{row.title}}</td>\n                  <td>{{row.ammountWeight | number}} L</td>\n                  <td>{{row.ammount | number}} €</td>\n                  <td>{{row.description}}</td>\n                </tr>\n              </tbody>\n            </table>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div class=\"card-header\">\n          <h4 class=\"card-title\"> Total Production</h4>\n        </div>\n        <div class=\"card-body\">\n          <div class=\"table-responsive-sm\">\n            <table class=\"table\">\n              <thead class=\"text-primary\">\n                <th *ngFor=\"let cell of tableData.headerRow\">{{cell}}</th>\n              </thead>\n              <tbody>\n                <tr *ngFor=\"let row of productionList; let i = index;\">\n                  <td>{{i+1}}</td>\n                  <td>{{row.farmerid}}</td>\n                  <td>{{row.title}}</td>\n                  <td>{{row.ammountWeight | number}} kg</td>\n                  <td>{{row.units | number}}</td>\n                  <td>{{row.ammountWeight*estimatedPrice | number}} €</td>\n                  <td>{{row.registrationDate | date}}</td>\n                  <td>{{row.description}}</td>\n                </tr>\n              </tbody>\n            </table>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -3406,8 +3753,7 @@ module.exports = "<div class=\"panel-header panel-header-sm\">\n</div>\n<div cla
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TotalProductionComponent", function() { return TotalProductionComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _core_content_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/content.service */ "./src/app/core/content.service.ts");
+/* harmony import */ var _core_content_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/content.service */ "./src/app/core/content.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3419,19 +3765,17 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
-
 var TotalProductionComponent = /** @class */ (function () {
-    function TotalProductionComponent(router, contentService) {
-        this.router = router;
+    function TotalProductionComponent(contentService) {
         this.contentService = contentService;
+        this.estimatedPrice = 3.80;
     }
     TotalProductionComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.tableData = {
-            headerRow: ['ID', 'Farmer ID', 'Title', 'Ammount Weight', 'Ammount', 'Description']
+            headerRow: ['ID', 'Farmer ID', 'Title', 'Weight', 'Units', 'Est. Profit', 'Date', 'Description']
         };
-        var x = this.contentService.getProductionData();
-        x.snapshotChanges().subscribe(function (item) {
+        this.contentService.getProductionData().snapshotChanges().subscribe(function (item) {
             _this.productionList = [];
             item.forEach(function (element) {
                 var y = element.payload.toJSON();
@@ -3446,8 +3790,7 @@ var TotalProductionComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./total-production.component.html */ "./src/app/total-production/total-production.component.html"),
             styles: [__webpack_require__(/*! ./total-production.component.css */ "./src/app/total-production/total-production.component.css")]
         }),
-        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
-            _core_content_service__WEBPACK_IMPORTED_MODULE_2__["ContentService"]])
+        __metadata("design:paramtypes", [_core_content_service__WEBPACK_IMPORTED_MODULE_1__["ContentService"]])
     ], TotalProductionComponent);
     return TotalProductionComponent;
 }());
@@ -3474,7 +3817,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"panel-header panel-header-sm\"></div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-8\">\n      <div class=\"card\">\n        <div class=\"card-header\">\n          <h5 class=\"title\">Edit Profile</h5>\n        </div>\n        <div class=\"card-body\">\n          <form #userForm=\"ngForm\" (ngSubmit)=\"onSubmit(userForm)\">\n            <input type=\"hidden\" name=\"uid\" #uid=\"ngModel\" [(ngModel)]=\"userID\">\n            <input type=\"hidden\" name=\"provider\" #provider=\"ngModel\" [(ngModel)]=\"user.provider\">\n            <input type=\"hidden\" name=\"email\" #email=\"ngModel\" [(ngModel)]=\"user.email\">\n            <input type=\"hidden\" name=\"photo\" #photo=\"ngModel\" [(ngModel)]=\"user.photo\">\n            <input type=\"hidden\" name=\"role\" #role=\"ngModel\" [(ngModel)]=\"user.role\">\n            <div class=\"row\">\n              <div class=\"col-md-6 pr-1\">\n                <div class=\"form-group\">\n                  <label>First Name</label>\n                  <input type=\"text\" class=\"form-control\" name=\"firstName\" #firstName=\"ngModel\" [(ngModel)]=\"user.firstName\"\n                    placeholder=\"First Name\">\n                </div>\n              </div>\n              <div class=\"col-md-6 pr-1\">\n                <div class=\"form-group\">\n                  <label>Last Name</label>\n                  <input type=\"text\" class=\"form-control\" name=\"lastName\" #lastName=\"ngModel\" [(ngModel)]=\"user.lastName\"\n                    placeholder=\"Last Name\">\n                </div>\n              </div>\n            </div>\n            <div class=\"row\">\n              <div class=\"col-md-6 pr-1\">\n                <div class=\"form-group\">\n                  <label>City</label>\n                  <input type=\"text\" class=\"form-control\" name=\"city\" #city=\"ngModel\" [(ngModel)]=\"user.city\"\n                    placeholder=\"City\">\n                </div>\n              </div>\n              <div class=\"col-md-6 pr-1\">\n                <div class=\"form-group\">\n                  <label>Region</label>\n                  <select class=\"form-control\" name=\"region\" #region=\"ngModel\" [(ngModel)]=\"user.region\">\n                    <option *ngFor=\"let regionValue of regionsList;\" [value]=\"regionValue\">{{regionValue}}</option>\n                  </select>\n                </div>\n              </div>\n            </div>\n            <div class=\"row\">\n              <div class=\"col-md-12\">\n                <div class=\"form-group\">\n                  <label>About Me</label>\n                  <textarea rows=\"4\" cols=\"80\" class=\"form-control\" name=\"about\" #about=\"ngModel\" [(ngModel)]=\"user.about\"\n                    placeholder=\"About Me\"></textarea>\n                </div>\n              </div>\n            </div>\n            <div class=\"row justify-content-md-center\">\n              <div class=\"col-md-6\">\n                <div class=\"form-group\">\n                  <button type=\"submit\" class=\"btn btn-primary btn-block\" *ngIf=\"user.uid!==null\">Update</button>\n                </div>\n              </div>\n            </div>\n          </form>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-md-4\">\n      <div class=\"card card-user\">\n        <div class=\"image\">\n          <img src=\"./assets/img/bg5.jpg\" alt=\"user-background\">\n        </div>\n        <div class=\"card-body\">\n          <div class=\"author\">\n            <img class=\"avatar border-gray\" [src]=\"user.photo\" alt=\"farmer-image\">\n            <h5>{{user.firstName}} {{user.lastName}}</h5>\n            <h6>{{user.role}}</h6>\n            <p class=\"description\">\n              Email: {{user.email}}\n              <br>\n              City: {{user.city}}\n              <br>\n              Region: {{user.region}}\n            </p>\n          </div>\n          <hr>\n          <p class=\"description text-center\">{{user.about}}</p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"panel-header panel-header-sm\"></div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-8\">\n      <div class=\"card\">\n        <div class=\"card-header\">\n          <h5 class=\"title\">Edit Profile</h5>\n        </div>\n        <div class=\"card-body\">\n          <form #userForm=\"ngForm\" (ngSubmit)=\"onSubmit(userForm)\">\n            <input type=\"hidden\" name=\"uid\" #uid=\"ngModel\" [(ngModel)]=\"userID\">\n            <input type=\"hidden\" name=\"provider\" #provider=\"ngModel\" [(ngModel)]=\"user.provider\">\n            <input type=\"hidden\" name=\"email\" #email=\"ngModel\" [(ngModel)]=\"user.email\">\n            <input type=\"hidden\" name=\"photo\" #photo=\"ngModel\" [(ngModel)]=\"user.photo\">\n            <input type=\"hidden\" name=\"role\" #role=\"ngModel\" [(ngModel)]=\"user.role\">\n            <div class=\"row\">\n              <div class=\"col-md-6 pr-1\">\n                <div class=\"form-group\">\n                  <label>First Name</label>\n                  <input type=\"text\" class=\"form-control\" name=\"firstName\" #firstName=\"ngModel\" [(ngModel)]=\"user.firstName\"\n                    placeholder=\"First Name\">\n                </div>\n              </div>\n              <div class=\"col-md-6 pr-1\">\n                <div class=\"form-group\">\n                  <label>Last Name</label>\n                  <input type=\"text\" class=\"form-control\" name=\"lastName\" #lastName=\"ngModel\" [(ngModel)]=\"user.lastName\"\n                    placeholder=\"Last Name\">\n                </div>\n              </div>\n            </div>\n            <div class=\"row\">\n              <div class=\"col-md-6 pr-1\">\n                <div class=\"form-group\">\n                  <label>City</label>\n                  <input type=\"text\" class=\"form-control\" name=\"city\" #city=\"ngModel\" [(ngModel)]=\"user.city\"\n                    placeholder=\"City\">\n                </div>\n              </div>\n              <div class=\"col-md-6 pr-1\">\n                <div class=\"form-group\">\n                  <label>Region</label>\n                  <select class=\"form-control\" name=\"region\" #region=\"ngModel\" [(ngModel)]=\"user.region\">\n                    <option disabled value=\"\">Select region</option>\n                    <option *ngFor=\"let regionValue of regionsList;\" [value]=\"regionValue\">{{regionValue}}</option>\n                  </select>\n                </div>\n              </div>\n            </div>\n            <div class=\"row\">\n              <div class=\"col-md-12\">\n                <div class=\"form-group\">\n                  <label>About Me</label>\n                  <textarea rows=\"4\" cols=\"80\" class=\"form-control\" name=\"about\" #about=\"ngModel\" [(ngModel)]=\"user.about\"\n                    placeholder=\"About Me\"></textarea>\n                </div>\n              </div>\n            </div>\n            <div class=\"row justify-content-md-center\">\n              <div class=\"col-md-6\">\n                <div class=\"form-group\">\n                  <button type=\"submit\" class=\"btn btn-primary btn-block\" *ngIf=\"user.uid!==null\">Update</button>\n                </div>\n              </div>\n            </div>\n          </form>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-md-4\">\n      <div class=\"card card-user\">\n        <div class=\"image\">\n          <img src=\"./assets/img/bg5.jpg\" alt=\"user-background\">\n        </div>\n        <div class=\"card-body\">\n          <div class=\"author\">\n            <img class=\"avatar border-gray\" [src]=\"user.photo\" alt=\"farmer-image\">\n            <h5>{{user.firstName}} {{user.lastName}}</h5>\n            <h6>{{user.role}}</h6>\n            <p class=\"description\">\n              Email: {{user.email}}\n              <br>\n              City: {{user.city}}\n              <br>\n              Region: {{user.region}}\n            </p>\n          </div>\n          <hr>\n          <p class=\"description text-center\">{{user.about}}</p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 

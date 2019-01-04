@@ -78,16 +78,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _admin_layout_routing__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./admin-layout.routing */ "./src/app/layouts/admin-layout/admin-layout.routing.ts");
-/* harmony import */ var _table_list_table_list_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../table-list/table-list.component */ "./src/app/table-list/table-list.component.ts");
-/* harmony import */ var _typography_typography_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../typography/typography.component */ "./src/app/typography/typography.component.ts");
-/* harmony import */ var _icons_icons_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../icons/icons.component */ "./src/app/icons/icons.component.ts");
-/* harmony import */ var _maps_maps_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../maps/maps.component */ "./src/app/maps/maps.component.ts");
-/* harmony import */ var _notifications_notifications_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../notifications/notifications.component */ "./src/app/notifications/notifications.component.ts");
-/* harmony import */ var ng2_charts__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ng2-charts */ "./node_modules/ng2-charts/index.js");
-/* harmony import */ var ng2_charts__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(ng2_charts__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
-/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
-/* harmony import */ var _total_users_total_users_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../total-users/total-users.component */ "./src/app/total-users/total-users.component.ts");
+/* harmony import */ var _icons_icons_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../icons/icons.component */ "./src/app/icons/icons.component.ts");
+/* harmony import */ var _notifications_notifications_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../notifications/notifications.component */ "./src/app/notifications/notifications.component.ts");
+/* harmony import */ var ng2_charts__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ng2-charts */ "./node_modules/ng2-charts/index.js");
+/* harmony import */ var ng2_charts__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(ng2_charts__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
+/* harmony import */ var _total_users_total_users_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../total-users/total-users.component */ "./src/app/total-users/total-users.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -105,30 +102,24 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-
-
-
 var AdminLayoutModule = /** @class */ (function () {
     function AdminLayoutModule() {
     }
     AdminLayoutModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            declarations: [
+                _total_users_total_users_component__WEBPACK_IMPORTED_MODULE_10__["TotalUsersComponent"],
+                _icons_icons_component__WEBPACK_IMPORTED_MODULE_5__["IconsComponent"],
+                _notifications_notifications_component__WEBPACK_IMPORTED_MODULE_6__["NotificationsComponent"]
+            ],
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
                 _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forChild(_admin_layout_routing__WEBPACK_IMPORTED_MODULE_4__["AdminLayoutRoutes"]),
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
-                ng2_charts__WEBPACK_IMPORTED_MODULE_10__["ChartsModule"],
-                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_11__["NgbModule"],
-                ngx_toastr__WEBPACK_IMPORTED_MODULE_12__["ToastrModule"].forRoot()
-            ],
-            declarations: [
-                _total_users_total_users_component__WEBPACK_IMPORTED_MODULE_13__["TotalUsersComponent"],
-                _table_list_table_list_component__WEBPACK_IMPORTED_MODULE_5__["TableListComponent"],
-                _typography_typography_component__WEBPACK_IMPORTED_MODULE_6__["TypographyComponent"],
-                _icons_icons_component__WEBPACK_IMPORTED_MODULE_7__["IconsComponent"],
-                _maps_maps_component__WEBPACK_IMPORTED_MODULE_8__["MapsComponent"],
-                _notifications_notifications_component__WEBPACK_IMPORTED_MODULE_9__["NotificationsComponent"],
+                ng2_charts__WEBPACK_IMPORTED_MODULE_7__["ChartsModule"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_8__["NgbModule"],
+                ngx_toastr__WEBPACK_IMPORTED_MODULE_9__["ToastrModule"].forRoot()
             ]
         })
     ], AdminLayoutModule);
@@ -149,187 +140,17 @@ var AdminLayoutModule = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminLayoutRoutes", function() { return AdminLayoutRoutes; });
-/* harmony import */ var _table_list_table_list_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../table-list/table-list.component */ "./src/app/table-list/table-list.component.ts");
-/* harmony import */ var _typography_typography_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../typography/typography.component */ "./src/app/typography/typography.component.ts");
-/* harmony import */ var _icons_icons_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../icons/icons.component */ "./src/app/icons/icons.component.ts");
-/* harmony import */ var _maps_maps_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../maps/maps.component */ "./src/app/maps/maps.component.ts");
-/* harmony import */ var _notifications_notifications_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../notifications/notifications.component */ "./src/app/notifications/notifications.component.ts");
-/* harmony import */ var _total_users_total_users_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../total-users/total-users.component */ "./src/app/total-users/total-users.component.ts");
-
-
-
+/* harmony import */ var _icons_icons_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../icons/icons.component */ "./src/app/icons/icons.component.ts");
+/* harmony import */ var _notifications_notifications_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../notifications/notifications.component */ "./src/app/notifications/notifications.component.ts");
+/* harmony import */ var _total_users_total_users_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../total-users/total-users.component */ "./src/app/total-users/total-users.component.ts");
 
 
 
 var AdminLayoutRoutes = [
-    { path: 'total-users', component: _total_users_total_users_component__WEBPACK_IMPORTED_MODULE_5__["TotalUsersComponent"] },
-    { path: 'table-list', component: _table_list_table_list_component__WEBPACK_IMPORTED_MODULE_0__["TableListComponent"] },
-    { path: 'typography', component: _typography_typography_component__WEBPACK_IMPORTED_MODULE_1__["TypographyComponent"] },
-    { path: 'icons', component: _icons_icons_component__WEBPACK_IMPORTED_MODULE_2__["IconsComponent"] },
-    { path: 'maps', component: _maps_maps_component__WEBPACK_IMPORTED_MODULE_3__["MapsComponent"] },
-    { path: 'notifications', component: _notifications_notifications_component__WEBPACK_IMPORTED_MODULE_4__["NotificationsComponent"] },
+    { path: 'total-users', component: _total_users_total_users_component__WEBPACK_IMPORTED_MODULE_2__["TotalUsersComponent"] },
+    { path: 'icons', component: _icons_icons_component__WEBPACK_IMPORTED_MODULE_0__["IconsComponent"] },
+    { path: 'notifications', component: _notifications_notifications_component__WEBPACK_IMPORTED_MODULE_1__["NotificationsComponent"] }
 ];
-
-
-/***/ }),
-
-/***/ "./src/app/maps/maps.component.css":
-/*!*****************************************!*\
-  !*** ./src/app/maps/maps.component.css ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21hcHMvbWFwcy5jb21wb25lbnQuY3NzIn0= */"
-
-/***/ }),
-
-/***/ "./src/app/maps/maps.component.html":
-/*!******************************************!*\
-  !*** ./src/app/maps/maps.component.html ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card \">\n        <div class=\"card-header \">\n          Google Maps\n        </div>\n        <div class=\"card-body \">\n          <div id=\"map\" class=\"map\"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
-
-/***/ }),
-
-/***/ "./src/app/maps/maps.component.ts":
-/*!****************************************!*\
-  !*** ./src/app/maps/maps.component.ts ***!
-  \****************************************/
-/*! exports provided: MapsComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MapsComponent", function() { return MapsComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var MapsComponent = /** @class */ (function () {
-    function MapsComponent() {
-    }
-    MapsComponent.prototype.ngOnInit = function () {
-        var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
-        var mapOptions = {
-            zoom: 13,
-            center: myLatlng,
-            scrollwheel: false,
-            styles: [{
-                    'featureType': 'water',
-                    'stylers': [{
-                            'saturation': 43
-                        }, {
-                            'lightness': -11
-                        }, {
-                            'hue': '#0088ff'
-                        }]
-                }, {
-                    'featureType': 'road',
-                    'elementType': 'geometry.fill',
-                    'stylers': [{
-                            'hue': '#ff0000'
-                        }, {
-                            'saturation': -100
-                        }, {
-                            'lightness': 99
-                        }]
-                }, {
-                    'featureType': 'road',
-                    'elementType': 'geometry.stroke',
-                    'stylers': [{
-                            'color': '#808080'
-                        }, {
-                            'lightness': 54
-                        }]
-                }, {
-                    'featureType': 'landscape.man_made',
-                    'elementType': 'geometry.fill',
-                    'stylers': [{
-                            'color': '#ece2d9'
-                        }]
-                }, {
-                    'featureType': 'poi.park',
-                    'elementType': 'geometry.fill',
-                    'stylers': [{
-                            'color': '#ccdca1'
-                        }]
-                }, {
-                    'featureType': 'road',
-                    'elementType': 'labels.text.fill',
-                    'stylers': [{
-                            'color': '#767676'
-                        }]
-                }, {
-                    'featureType': 'road',
-                    'elementType': 'labels.text.stroke',
-                    'stylers': [{
-                            'color': '#ffffff'
-                        }]
-                }, {
-                    'featureType': 'poi',
-                    'stylers': [{
-                            'visibility': 'off'
-                        }]
-                }, {
-                    'featureType': 'landscape.natural',
-                    'elementType': 'geometry.fill',
-                    'stylers': [{
-                            'visibility': 'on'
-                        }, {
-                            'color': '#b8cb93'
-                        }]
-                }, {
-                    'featureType': 'poi.park',
-                    'stylers': [{
-                            'visibility': 'on'
-                        }]
-                }, {
-                    'featureType': 'poi.sports_complex',
-                    'stylers': [{
-                            'visibility': 'on'
-                        }]
-                }, {
-                    'featureType': 'poi.medical',
-                    'stylers': [{
-                            'visibility': 'on'
-                        }]
-                }, {
-                    'featureType': 'poi.business',
-                    'stylers': [{
-                            'visibility': 'simplified'
-                        }]
-                }]
-        };
-        var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-        var marker = new google.maps.Marker({
-            position: myLatlng,
-            title: 'Hello World!'
-        });
-        // To add the marker to the map, call setMap();
-        marker.setMap(map);
-    };
-    MapsComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-maps',
-            template: __webpack_require__(/*! ./maps.component.html */ "./src/app/maps/maps.component.html"),
-            styles: [__webpack_require__(/*! ./maps.component.css */ "./src/app/maps/maps.component.css")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], MapsComponent);
-    return MapsComponent;
-}());
-
 
 
 /***/ }),
@@ -452,69 +273,6 @@ var NotificationsComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/table-list/table-list.component.css":
-/*!*****************************************************!*\
-  !*** ./src/app/table-list/table-list.component.css ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3RhYmxlLWxpc3QvdGFibGUtbGlzdC5jb21wb25lbnQuY3NzIn0= */"
-
-/***/ }),
-
-/***/ "./src/app/table-list/table-list.component.html":
-/*!******************************************************!*\
-  !*** ./src/app/table-list/table-list.component.html ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div class=\"card-header\">\n          <h4 class=\"card-title\"> Simple Table</h4>\n        </div>\n        <div class=\"card-body\">\n          <div class=\"table-responsive\">\n            <table class=\"table\">\n              <thead class=\" text-primary\">\n                <th>\n                  Name\n                </th>\n                <th>\n                  Country\n                </th>\n                <th>\n                  City\n                </th>\n                <th class=\"text-right\">\n                  Salary\n                </th>\n              </thead>\n              <tbody>\n                <tr>\n                  <td>\n                    Dakota Rice\n                  </td>\n                  <td>\n                    Niger\n                  </td>\n                  <td>\n                    Oud-Turnhout\n                  </td>\n                  <td class=\"text-right\">\n                    $36,738\n                  </td>\n                </tr>\n                <tr>\n                  <td>\n                    Minerva Hooper\n                  </td>\n                  <td>\n                    Curaçao\n                  </td>\n                  <td>\n                    Sinaai-Waas\n                  </td>\n                  <td class=\"text-right\">\n                    $23,789\n                  </td>\n                </tr>\n                <tr>\n                  <td>\n                    Sage Rodriguez\n                  </td>\n                  <td>\n                    Netherlands\n                  </td>\n                  <td>\n                    Baileux\n                  </td>\n                  <td class=\"text-right\">\n                    $56,142\n                  </td>\n                </tr>\n                <tr>\n                  <td>\n                    Philip Chaney\n                  </td>\n                  <td>\n                    Korea, South\n                  </td>\n                  <td>\n                    Overland Park\n                  </td>\n                  <td class=\"text-right\">\n                    $38,735\n                  </td>\n                </tr>\n                <tr>\n                  <td>\n                    Doris Greene\n                  </td>\n                  <td>\n                    Malawi\n                  </td>\n                  <td>\n                    Feldkirchen in Kärnten\n                  </td>\n                  <td class=\"text-right\">\n                    $63,542\n                  </td>\n                </tr>\n                <tr>\n                  <td>\n                    Mason Porter\n                  </td>\n                  <td>\n                    Chile\n                  </td>\n                  <td>\n                    Gloucester\n                  </td>\n                  <td class=\"text-right\">\n                    $78,615\n                  </td>\n                </tr>\n                <tr>\n                  <td>\n                    Jon Porter\n                  </td>\n                  <td>\n                    Portugal\n                  </td>\n                  <td>\n                    Gloucester\n                  </td>\n                  <td class=\"text-right\">\n                    $98,615\n                  </td>\n                </tr>\n              </tbody>\n            </table>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-md-12\">\n      <div class=\"card card-plain\">\n        <div class=\"card-header\">\n          <h4 class=\"card-title\"> Table on Plain Background</h4>\n          <p class=\"category\"> Here is a subtitle for this table</p>\n        </div>\n        <div class=\"card-body\">\n          <div class=\"table-responsive\">\n            <table class=\"table\">\n              <thead class=\" text-primary\">\n                <th>\n                  Name\n                </th>\n                <th>\n                  Country\n                </th>\n                <th>\n                  City\n                </th>\n                <th class=\"text-right\">\n                  Salary\n                </th>\n              </thead>\n              <tbody>\n                <tr>\n                  <td>\n                    Dakota Rice\n                  </td>\n                  <td>\n                    Niger\n                  </td>\n                  <td>\n                    Oud-Turnhout\n                  </td>\n                  <td class=\"text-right\">\n                    $36,738\n                  </td>\n                </tr>\n                <tr>\n                  <td>\n                    Minerva Hooper\n                  </td>\n                  <td>\n                    Curaçao\n                  </td>\n                  <td>\n                    Sinaai-Waas\n                  </td>\n                  <td class=\"text-right\">\n                    $23,789\n                  </td>\n                </tr>\n                <tr>\n                  <td>\n                    Sage Rodriguez\n                  </td>\n                  <td>\n                    Netherlands\n                  </td>\n                  <td>\n                    Baileux\n                  </td>\n                  <td class=\"text-right\">\n                    $56,142\n                  </td>\n                </tr>\n                <tr>\n                  <td>\n                    Philip Chaney\n                  </td>\n                  <td>\n                    Korea, South\n                  </td>\n                  <td>\n                    Overland Park\n                  </td>\n                  <td class=\"text-right\">\n                    $38,735\n                  </td>\n                </tr>\n                <tr>\n                  <td>\n                    Doris Greene\n                  </td>\n                  <td>\n                    Malawi\n                  </td>\n                  <td>\n                    Feldkirchen in Kärnten\n                  </td>\n                  <td class=\"text-right\">\n                    $63,542\n                  </td>\n                </tr>\n                <tr>\n                  <td>\n                    Mason Porter\n                  </td>\n                  <td>\n                    Chile\n                  </td>\n                  <td>\n                    Gloucester\n                  </td>\n                  <td class=\"text-right\">\n                    $78,615\n                  </td>\n                </tr>\n                <tr>\n                  <td>\n                    Jon Porter\n                  </td>\n                  <td>\n                    Portugal\n                  </td>\n                  <td>\n                    Gloucester\n                  </td>\n                  <td class=\"text-right\">\n                    $98,615\n                  </td>\n                </tr>\n              </tbody>\n            </table>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
-
-/***/ }),
-
-/***/ "./src/app/table-list/table-list.component.ts":
-/*!****************************************************!*\
-  !*** ./src/app/table-list/table-list.component.ts ***!
-  \****************************************************/
-/*! exports provided: TableListComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TableListComponent", function() { return TableListComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var TableListComponent = /** @class */ (function () {
-    function TableListComponent() {
-    }
-    TableListComponent.prototype.ngOnInit = function () {
-    };
-    TableListComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-table-list',
-            template: __webpack_require__(/*! ./table-list.component.html */ "./src/app/table-list/table-list.component.html"),
-            styles: [__webpack_require__(/*! ./table-list.component.css */ "./src/app/table-list/table-list.component.css")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], TableListComponent);
-    return TableListComponent;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/app/total-users/total-users.component.css":
 /*!*******************************************************!*\
   !*** ./src/app/total-users/total-users.component.css ***!
@@ -533,7 +291,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div class=\"card-header\">\n          <h4 class=\"card-title\"> Total Users</h4>\n        </div>\n        <div class=\"card-body\">\n          <div class=\"table-responsive-sm\">\n            <table class=\"table\">\n              <thead class=\"text-primary\">\n                <tr>\n                  <th *ngFor=\"let cell of tableData.headerRow\">{{cell}}</th>\n                </tr>\n              </thead>\n              <tbody>\n                <tr *ngFor=\"let row of usersList; let i = index;\">\n                  <td>{{i + 1}}</td>\n                  <td>{{row.provider}}</td>\n                  <td>{{row.firstName}} {{row.lastName}}</td>\n                  <td><a href=\"mailto: {{row.email}}\">{{row.email}}</a></td>\n                  <td>{{row.role}}</td>\n                  <td>{{row.city}}</td>\n                  <td>{{row.region}}</td>\n                </tr>\n              </tbody>\n            </table>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div class=\"card-header\">\n          <h4 class=\"card-title\"> Total Users</h4>\n        </div>\n        <div class=\"card-body\">\n          <div class=\"table-responsive-sm\">\n            <table class=\"table\">\n              <thead class=\"text-primary\">\n                <th *ngFor=\"let cell of tableData.headerRow\">{{cell}}</th>\n              </thead>\n              <tbody>\n                <tr *ngFor=\"let row of usersList; let i = index;\">\n                  <td>{{i + 1}}</td>\n                  <td>{{row.provider}}</td>\n                  <td>{{row.firstName}} {{row.lastName}}</td>\n                  <td><a href=\"mailto: {{row.email}}\">{{row.email}}</a></td>\n                  <td>{{row.role}}</td>\n                  <td>{{row.city}}</td>\n                  <td>{{row.region}}</td>\n                </tr>\n              </tbody>\n            </table>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -548,8 +306,7 @@ module.exports = "<div class=\"panel-header panel-header-sm\">\n</div>\n<div cla
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TotalUsersComponent", function() { return TotalUsersComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _core_content_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/content.service */ "./src/app/core/content.service.ts");
+/* harmony import */ var _core_content_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/content.service */ "./src/app/core/content.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -561,10 +318,8 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
-
 var TotalUsersComponent = /** @class */ (function () {
-    function TotalUsersComponent(router, contentService) {
-        this.router = router;
+    function TotalUsersComponent(contentService) {
         this.contentService = contentService;
     }
     TotalUsersComponent.prototype.ngOnInit = function () {
@@ -572,12 +327,11 @@ var TotalUsersComponent = /** @class */ (function () {
         this.tableData = {
             headerRow: ['ID', 'Provider', 'Name', 'Email', 'Role', 'City', 'Region']
         };
-        var x = this.contentService.getUsersData();
-        x.snapshotChanges().subscribe(function (item) {
+        this.contentService.getUsersData().snapshotChanges().subscribe(function (item) {
             _this.usersList = [];
             item.forEach(function (element) {
                 var y = element.payload.toJSON();
-                y['fid'] = element.key;
+                y['uid'] = element.key;
                 _this.usersList.push(y);
             });
         });
@@ -588,73 +342,9 @@ var TotalUsersComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./total-users.component.html */ "./src/app/total-users/total-users.component.html"),
             styles: [__webpack_require__(/*! ./total-users.component.css */ "./src/app/total-users/total-users.component.css")]
         }),
-        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
-            _core_content_service__WEBPACK_IMPORTED_MODULE_2__["ContentService"]])
+        __metadata("design:paramtypes", [_core_content_service__WEBPACK_IMPORTED_MODULE_1__["ContentService"]])
     ], TotalUsersComponent);
     return TotalUsersComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/typography/typography.component.css":
-/*!*****************************************************!*\
-  !*** ./src/app/typography/typography.component.css ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3R5cG9ncmFwaHkvdHlwb2dyYXBoeS5jb21wb25lbnQuY3NzIn0= */"
-
-/***/ }),
-
-/***/ "./src/app/typography/typography.component.html":
-/*!******************************************************!*\
-  !*** ./src/app/typography/typography.component.html ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div class=\"card-header\">\n          <h5 class=\"title\">Now Ui Table Heading</h5>\n          <p class=\"category\">Created using Montserrat Font Family</p>\n        </div>\n        <div class=\"card-body\">\n          <div class=\"typography-line\">\n            <h1>\n              <span>Header 1</span>The Life of Now Ui Dashboard </h1>\n          </div>\n          <div class=\"typography-line\">\n            <h2>\n              <span>Header 2</span>The Life of Now Ui Dashboard </h2>\n          </div>\n          <div class=\"typography-line\">\n            <h3>\n              <span>Header 3</span>The Life of Now Ui Dashboard </h3>\n          </div>\n          <div class=\"typography-line\">\n            <h4>\n              <span>Header 4</span>The Life of Now Ui Dashboard </h4>\n          </div>\n          <div class=\"typography-line\">\n            <h5>\n              <span>Header 5</span>The Life of Now Ui Dashboard </h5>\n          </div>\n          <div class=\"typography-line\">\n            <h6>\n              <span>Header 6</span>The Life of Now Ui Dashboard </h6>\n          </div>\n          <div class=\"typography-line\">\n            <p>\n              <span>Paragraph</span>\n              I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.\n            </p>\n          </div>\n          <div class=\"typography-line\">\n            <span>Quote</span>\n            <blockquote>\n              <p class=\"blockquote blockquote-primary\">\n                \"I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.\"\n                <br>\n                <br>\n                <small>\n                  - Noaa\n                </small>\n              </p>\n            </blockquote>\n          </div>\n          <div class=\"typography-line\">\n            <span>Muted Text</span>\n            <p class=\"text-muted\">\n              I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...\n            </p>\n          </div>\n          <div class=\"typography-line\">\n            <span>Primary Text</span>\n            <p class=\"text-primary\">\n              I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...</p>\n          </div>\n          <div class=\"typography-line\">\n            <span>Info Text</span>\n            <p class=\"text-info\">\n              I will be the leader of a company that ends up being worth billions of dollars, because I got the answers... </p>\n          </div>\n          <div class=\"typography-line\">\n            <span>Success Text</span>\n            <p class=\"text-success\">\n              I will be the leader of a company that ends up being worth billions of dollars, because I got the answers... </p>\n          </div>\n          <div class=\"typography-line\">\n            <span>Warning Text</span>\n            <p class=\"text-warning\">\n              I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...\n            </p>\n          </div>\n          <div class=\"typography-line\">\n            <span>Danger Text</span>\n            <p class=\"text-danger\">\n              I will be the leader of a company that ends up being worth billions of dollars, because I got the answers... </p>\n          </div>\n          <div class=\"typography-line\">\n            <h2>\n              <span>Small Tag</span>\n              Header with small subtitle\n              <br>\n              <small>Use \"small\" tag for the headers</small>\n            </h2>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
-
-/***/ }),
-
-/***/ "./src/app/typography/typography.component.ts":
-/*!****************************************************!*\
-  !*** ./src/app/typography/typography.component.ts ***!
-  \****************************************************/
-/*! exports provided: TypographyComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TypographyComponent", function() { return TypographyComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var TypographyComponent = /** @class */ (function () {
-    function TypographyComponent() {
-    }
-    TypographyComponent.prototype.ngOnInit = function () {
-    };
-    TypographyComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-typography',
-            template: __webpack_require__(/*! ./typography.component.html */ "./src/app/typography/typography.component.html"),
-            styles: [__webpack_require__(/*! ./typography.component.css */ "./src/app/typography/typography.component.css")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], TypographyComponent);
-    return TypographyComponent;
 }());
 
 

@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/app/core/tip.ts"],"names":[],"mappings":";;;;;;;;;;AAAA;AAAA;AAAA;IAAA;IAOA,CAAC;IAAD,UAAC;AAAD,CAAC","file":"common.js","sourcesContent":["export class Tip {\r\n    tid: string;\r\n    cid: string;\r\n    title: string;\r\n    content: string;\r\n    tag: string;\r\n    registrationDate: Date;\r\n}\r\n"],"sourceRoot":""}
